@@ -1,0 +1,4274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>How to Read a Credit Report — Free Instant Analysis | Parseur10X</title>
+<meta name="description" content="Upload your Equifax, TransUnion, or Experian credit report and get an instant plain-English breakdown. See every negative item, your utilization, and exactly what to do next. Free.">
+<meta name="keywords" content="how to read a credit report, credit report analyzer, understand my credit report, credit report explained, free credit report analysis, equifax report, transunion report, experian report, credit repair, dispute credit report">
+<link rel="canonical" href="https://parseur10.live/">
+
+<!-- Open Graph (social sharing) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://parseur10.live/">
+<meta property="og:title" content="How to Read a Credit Report — Free Instant Analysis">
+<meta property="og:description" content="Stop guessing what's on your credit report. Upload it and get a plain-English breakdown in seconds — every negative item, your score factors, and a clear action plan.">
+<meta property="og:image" content="https://parseur10.live/og-image.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Read a Credit Report — Free Instant Analysis">
+<meta name="twitter:description" content="Upload your credit report. Get a plain-English breakdown instantly. Free.">
+<meta name="twitter:image" content="https://parseur10.live/og-image.png">
+
+<!-- Favicon — inline SVG as data URI, no external file needed -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080C10'/><text x='4' y='24' font-family='Arial' font-weight='900' font-size='22' fill='%2300E5FF'>P</text><text x='16' y='24' font-family='Arial' font-weight='900' font-size='14' fill='%23ffffff'>10</text></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgo=">
+<meta name="theme-color" content="#080C10">
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080C10;
+    --surface: #0D1318;
+    --surface2: #121A22;
+    --border: #1E2D3D;
+    --accent: #00E5FF;
+    --accent2: #FF6B35;
+    --accent3: #7BFF6A;
+    --warn: #FFB800;
+    --danger: #FF3B5C;
+    --text: #E8EDF2;
+    --muted: #5A7080;
+    --font-head: 'Syne', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-mono);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* GRID BACKGROUND */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HEADER */
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .logo-text {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text);
+  }
+
+  .logo-text span {
+    color: var(--accent);
+  }
+
+  .logo-badge {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 6px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .header-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent3);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* HERO */
+  .hero {
+    padding: 64px 0 40px;
+    text-align: center;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero-label::before, .hero-label::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.4;
+  }
+
+  .hero h1 {
+    font-family: var(--font-head);
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 .line1 { color: var(--text); }
+  .hero h1 .line2 { color: var(--accent); }
+
+  .hero p {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+  }
+
+  /* UPLOAD ZONE */
+  .upload-section {
+    max-width: 680px;
+    margin: 0 auto 80px;
+  }
+
+  .bureau-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .bureau-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bureau-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .bureau-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .bureau-btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0, 229, 255, 0.05);
+  }
+
+  .bureau-btn .bureau-name { position: relative; z-index: 1; display: block; font-weight: 600; font-size: 13px; }
+  .bureau-btn .bureau-sub { position: relative; z-index: 1; display: block; font-size: 9px; margin-top: 3px; opacity: 0.6; }
+
+  .upload-zone {
+    border: 1px dashed var(--border);
+    background: var(--surface);
+    padding: 60px 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .upload-zone::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,229,255,0.03) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .upload-zone:hover, .upload-zone.dragover {
+    border-color: var(--accent);
+    background: rgba(0,229,255,0.03);
+  }
+
+  .upload-zone input { display: none; }
+
+  .upload-icon {
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    transition: border-color 0.2s;
+  }
+
+  .upload-zone:hover .upload-icon { border-color: var(--accent); }
+
+  .upload-title {
+    font-family: var(--font-head);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .upload-sub {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .upload-types {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .type-tag {
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  /* PARSE BUTTON */
+  .parse-btn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 18px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    display: none;
+  }
+
+  .parse-btn.visible { display: block; }
+
+  .parse-btn:hover {
+    background: #00C8E0;
+    transform: translateY(-1px);
+  }
+
+  .parse-btn:active { transform: translateY(0); }
+
+  /* FILE SELECTED STATE */
+  .file-selected {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: rgba(0,229,255,0.05);
+    border: 1px solid rgba(0,229,255,0.2);
+    margin-top: 12px;
+  }
+
+  .file-selected.visible { display: flex; }
+
+  .file-icon { font-size: 20px; }
+
+  .file-info { flex: 1; }
+  .file-name { font-size: 13px; color: var(--text); }
+  .file-size { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  .file-remove {
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+  }
+  .file-remove:hover { color: var(--danger); }
+
+  /* PROCESSING STATE */
+  #processingState {
+    display: none;
+    text-align: center;
+    padding: 80px 40px;
+  }
+
+  #processingState.visible { display: block; }
+
+  .processing-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .processing-steps {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .proc-step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--muted);
+    transition: color 0.3s;
+  }
+
+  .proc-step.active { color: var(--text); }
+  .proc-step.done { color: var(--accent3); }
+
+  .proc-step-icon {
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+
+  .proc-step.active .proc-step-icon { border-color: var(--accent); color: var(--accent); }
+  .proc-step.done .proc-step-icon { border-color: var(--accent3); color: var(--accent3); }
+
+  /* RESULTS */
+  #resultsState {
+    display: none;
+    animation: fadeIn 0.5s ease;
+  }
+
+  #resultsState.visible { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .results-title {
+    font-family: var(--font-head);
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+
+  .results-meta {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  .results-meta span { color: var(--accent); }
+
+  .parse-again-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+
+  .parse-again-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* SCORE DISPLAY */
+  .score-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+
+  .score-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+
+  .score-circle svg {
+    transform: rotate(-90deg);
+  }
+
+  .score-circle-bg {
+    fill: none;
+    stroke: var(--border);
+    stroke-width: 6;
+  }
+
+  .score-circle-fill {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .score-number {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .score-value {
+    font-family: var(--font-head);
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .score-label {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  .score-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .score-factor {
+    background: var(--surface2);
+    padding: 16px;
+  }
+
+  .sf-label {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .sf-value {
+    font-family: var(--font-head);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .sf-sub {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+
+  /* NEGATIVE ITEMS */
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+
+  .section-title {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .section-count {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  .section-count.warn { color: var(--danger); }
+
+  .negative-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--danger);
+    padding: 20px 24px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: start;
+    transition: border-color 0.2s;
+  }
+
+  .negative-item:hover { border-color: var(--danger); }
+
+  .ni-name {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .ni-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 11px;
+    color: var(--muted);
+    flex-wrap: wrap;
+  }
+
+  .ni-meta span { letter-spacing: 0.5px; }
+
+  .ni-badge {
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    background: rgba(255, 59, 92, 0.1);
+    color: var(--danger);
+    border: 1px solid rgba(255, 59, 92, 0.3);
+    white-space: nowrap;
+  }
+
+  .ni-badge.late { background: rgba(255,184,0,0.1); color: var(--warn); border-color: rgba(255,184,0,0.3); }
+  .ni-badge.collection { background: rgba(255,59,92,0.1); color: var(--danger); border-color: rgba(255,59,92,0.3); }
+  .ni-badge.inquiry { background: rgba(90,112,128,0.15); color: var(--muted); border-color: var(--border); }
+
+  /* DISPUTE PANDA HOOK */
+  .dispute-hook {
+    background: linear-gradient(135deg, rgba(255,107,53,0.08) 0%, rgba(255,107,53,0.03) 100%);
+    border: 1px solid rgba(255,107,53,0.25);
+    padding: 20px 24px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .dispute-hook-text {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .dispute-hook-text strong { color: var(--accent2); display: block; margin-bottom: 3px; font-family: var(--font-head); font-size: 14px; }
+
+  .dispute-btn {
+    background: var(--accent2);
+    color: white;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .dispute-btn:hover { background: #e55a27; transform: translateY(-1px); }
+  .dispute-btn span { opacity: 0.6; font-size: 9px; display: block; margin-top: 2px; }
+
+  /* AFFILIATE SECTION */
+  .affiliate-section {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+
+  .affiliate-intro {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 20px;
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  .affiliate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 14px;
+  }
+
+  .affiliate-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 22px;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+
+  .affiliate-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+  }
+
+  .affiliate-card.type-repair::before { background: var(--danger); }
+  .affiliate-card.type-credit::before { background: var(--accent); }
+  .affiliate-card.type-builder::before { background: var(--accent3); }
+  .affiliate-card.type-monitor::before { background: var(--warn); }
+
+  .affiliate-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .aff-trigger {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .aff-trigger::before {
+    content: '▶';
+    font-size: 7px;
+    color: var(--accent);
+  }
+
+  .aff-name {
+    font-family: var(--font-head);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .aff-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .aff-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  .aff-link {
+    color: var(--accent);
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+
+  .aff-arrow { color: var(--accent); font-size: 16px; }
+
+  /* EMAIL CAPTURE */
+  .email-capture {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 32px;
+    margin-top: 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .email-capture::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  }
+
+  .email-capture h3 {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  .email-capture p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    line-height: 1.7;
+  }
+
+  .email-form {
+    display: flex;
+    gap: 10px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .email-input {
+    flex: 1;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .email-input:focus { border-color: var(--accent); }
+  .email-input::placeholder { color: var(--muted); }
+
+  .email-submit {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 14px 22px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .email-submit:hover { background: #00C8E0; }
+
+  .email-disclaimer {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 12px;
+    opacity: 0.6;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--muted);
+  }
+
+  .footer-logo span { color: var(--accent); }
+
+  .footer-text {
+    font-size: 10px;
+    color: var(--muted);
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+  }
+
+  /* LOADING BAR */
+  .loading-bar {
+    height: 2px;
+    background: var(--border);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .loading-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    width: 0%;
+    transition: width 0.4s ease;
+  }
+
+  /* GOOD ITEMS */
+  .good-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent3);
+    padding: 16px 24px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .gi-name {
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .gi-meta { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+  .gi-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(123,255,106,0.08);
+    color: var(--accent3);
+    border: 1px solid rgba(123,255,106,0.2);
+  }
+
+  /* UTILIZATION BAR */
+  .util-bar-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    margin-bottom: 10px;
+  }
+
+  .util-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .util-name { font-size: 13px; font-weight: 500; }
+  .util-pct { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
+
+  .util-track {
+    height: 4px;
+    background: var(--border);
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .util-fill {
+    height: 100%;
+    border-radius: 0;
+    transition: width 1s ease;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+  /* ── PHASE 2 STYLES ─────────────────────────────── */
+
+  /* Experian now unlocked */
+  .bureau-btn.locked { opacity: 0.45; cursor: not-allowed; }
+  .bureau-btn.locked .bureau-sub { color: var(--muted); }
+
+  /* SCAN TYPE SELECTOR — appears when Experian chosen */
+  .scan-type-panel {
+    display: none;
+    background: rgba(0,229,255,0.04);
+    border: 1px solid rgba(0,229,255,0.15);
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    animation: fadeIn 0.3s ease;
+  }
+  .scan-type-panel.visible { display: block; }
+
+  .scan-type-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .scan-type-opts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .scan-opt {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-mono);
+    color: var(--muted);
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .scan-opt:hover { border-color: var(--accent); color: var(--text); }
+  .scan-opt.active { border-color: var(--accent); color: var(--accent); background: rgba(0,229,255,0.06); }
+
+  .scan-opt .opt-icon { font-size: 20px; margin-bottom: 8px; display: block; }
+  .scan-opt .opt-name { font-weight: 500; font-size: 13px; display: block; margin-bottom: 3px; color: inherit; }
+  .scan-opt .opt-sub { font-size: 10px; opacity: 0.6; display: block; line-height: 1.4; }
+
+  /* PIPELINE BADGE — shown in processing */
+  .pipeline-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .pipeline-badge.vision { border-color: rgba(255,107,53,0.4); color: var(--accent2); }
+  .pipeline-badge.docint { border-color: rgba(0,229,255,0.4); color: var(--accent); }
+
+  .pipeline-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: pulse 1.5s infinite; }
+
+  /* SCAN QUALITY WARNING */
+  .scan-quality-tip {
+    background: rgba(255,184,0,0.06);
+    border: 1px solid rgba(255,184,0,0.2);
+    padding: 14px 18px;
+    margin-top: 12px;
+    display: none;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .scan-quality-tip.visible { display: block; }
+  .scan-quality-tip strong { color: var(--warn); display: block; margin-bottom: 4px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+
+  /* PIPELINE ROUTE INDICATOR in results */
+  .pipeline-route {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .pipeline-route.vision { border-color: rgba(255,107,53,0.35); color: var(--accent2); }
+  .pipeline-route.docint { border-color: rgba(0,229,255,0.35); color: var(--accent); }
+
+  /* VALIDATION SURVEY MODAL */
+  .survey-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+  .survey-overlay.visible { display: flex; }
+
+  .survey-modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    max-width: 520px;
+    width: 90%;
+    padding: 40px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .survey-modal::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+  }
+
+  .survey-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .survey-close:hover { color: var(--text); }
+
+  .survey-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .survey-modal h2 {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  .survey-modal p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .survey-q {
+    margin-bottom: 24px;
+  }
+
+  .survey-q-label {
+    font-size: 12px;
+    color: var(--text);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  .survey-opts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .survey-opt {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+    text-align: left;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .survey-opt:hover { border-color: var(--accent); color: var(--text); }
+  .survey-opt.selected { border-color: var(--accent); color: var(--accent); background: rgba(0,229,255,0.05); }
+
+  .survey-opt-radio {
+    width: 14px; height: 14px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: all 0.15s;
+  }
+  .survey-opt.selected .survey-opt-radio { border-color: var(--accent); background: var(--accent); }
+
+  .survey-submit {
+    width: 100%;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 800;
+    padding: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  .survey-submit:hover { background: #00C8E0; }
+  .survey-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .survey-skip {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 11px;
+    color: var(--muted);
+    cursor: pointer;
+    letter-spacing: 0.5px;
+  }
+  .survey-skip:hover { color: var(--text); }
+
+  /* EXPERIAN MAILED BANNER in results */
+  .experian-ocr-banner {
+    display: none;
+    background: rgba(255,107,53,0.06);
+    border: 1px solid rgba(255,107,53,0.2);
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+    align-items: center;
+    gap: 14px;
+  }
+  .experian-ocr-banner.visible { display: flex; }
+  .experian-ocr-banner strong { color: var(--accent2); }
+  .ocr-icon { font-size: 20px; flex-shrink: 0; }
+
+  /* FILE TYPE TAGS update */
+  .type-tag.active-type { border-color: var(--accent); color: var(--accent); }
+
+  /* ── PHASE 3 STYLES — AFFILIATE MATCHING ENGINE ─── */
+
+  /* Match score badge on cards */
+  .aff-match-score {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    font-weight: 600;
+  }
+  .aff-match-score.high { background: rgba(123,255,106,0.12); color: var(--accent3); border: 1px solid rgba(123,255,106,0.25); }
+  .aff-match-score.medium { background: rgba(0,229,255,0.08); color: var(--accent); border: 1px solid rgba(0,229,255,0.2); }
+  .aff-match-score.low { background: rgba(90,112,128,0.1); color: var(--muted); border: 1px solid var(--border); }
+
+  /* Match reason tags under trigger */
+  .aff-reasons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+
+  .aff-reason-tag {
+    font-size: 9px;
+    letter-spacing: 0.8px;
+    padding: 3px 7px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    text-transform: uppercase;
+    background: var(--surface2);
+  }
+
+  /* Priority indicator — top pick */
+  .aff-priority-banner {
+    background: linear-gradient(90deg, rgba(255,107,53,0.12), transparent);
+    border-left: 2px solid var(--accent2);
+    padding: 6px 12px;
+    margin-bottom: 14px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--accent2);
+    text-transform: uppercase;
+    display: none;
+  }
+  .aff-priority-banner.visible { display: block; }
+
+  /* Match engine summary bar */
+  .match-summary {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .match-summary-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  .match-triggers {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+
+  .match-trigger-chip {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .match-trigger-chip.active {
+    border-color: rgba(0,229,255,0.3);
+    color: var(--accent);
+    background: rgba(0,229,255,0.04);
+  }
+
+  .match-trigger-chip.critical {
+    border-color: rgba(255,59,92,0.3);
+    color: var(--danger);
+    background: rgba(255,59,92,0.04);
+  }
+
+  .match-trigger-chip .chip-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .match-count {
+    font-size: 11px;
+    color: var(--muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .match-count strong { color: var(--accent); font-family: var(--font-head); font-size: 16px; }
+
+  /* Affiliate card — Phase 3 upgrade */
+  .affiliate-card {
+    position: relative; /* needed for absolute match score */
+  }
+
+  .aff-urgency {
+    font-size: 10px;
+    color: var(--danger);
+    letter-spacing: 0.8px;
+    margin-top: 8px;
+    display: none;
+  }
+  .aff-urgency.visible { display: block; }
+
+  /* No matches state */
+  .no-matches {
+    text-align: center;
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  /* Filter tabs */
+  .aff-filter-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .aff-filter-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.15s;
+  }
+
+  .aff-filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .aff-filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(0,229,255,0.05); }
+
+  /* ── PHASE 4 — DISPUTE PANDA INTEGRATION ─────────── */
+
+  /* Per-item dispute button on negative cards */
+  .dispute-item-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 12px;
+    background: none;
+    border: 1px solid rgba(255,107,53,0.3);
+    color: var(--accent2);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 8px 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .dispute-item-btn:hover { background: rgba(255,107,53,0.08); border-color: var(--accent2); }
+  .dispute-item-btn.queued {
+    border-color: var(--accent3);
+    color: var(--accent3);
+    background: rgba(123,255,106,0.06);
+  }
+  .dispute-item-btn .btn-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+
+  /* DISPUTE QUEUE PANEL */
+  .dispute-queue-panel {
+    display: none;
+    background: var(--surface);
+    border: 1px solid rgba(255,107,53,0.25);
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  .dispute-queue-panel.visible { display: block; }
+
+  .dq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,107,53,0.04);
+  }
+
+  .dq-title {
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dq-count {
+    background: var(--accent2);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-head);
+  }
+
+  .dq-panda-logo {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .dq-items {
+    padding: 0 20px;
+  }
+
+  .dq-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    gap: 12px;
+    animation: fadeIn 0.25s ease;
+  }
+  .dq-item:last-child { border-bottom: none; }
+
+  .dq-item-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .dq-item-meta {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+
+  .dq-item-remove {
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 8px;
+    flex-shrink: 0;
+  }
+  .dq-item-remove:hover { color: var(--danger); }
+
+  .dq-actions {
+    padding: 16px 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dq-preview-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .dq-preview-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .dq-send-btn {
+    background: var(--accent2);
+    border: none;
+    color: white;
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 12px 24px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dq-send-btn:hover { background: #e55a27; }
+  .dq-send-btn .send-sub { font-size: 9px; opacity: 0.7; font-weight: 400; letter-spacing: 1px; display: block; margin-top: 1px; font-family: var(--font-mono); }
+
+  .dq-notify-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+  }
+
+  .dq-notify-input {
+    flex: 1;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .dq-notify-input:focus { border-color: var(--accent2); }
+  .dq-notify-input::placeholder { color: var(--muted); }
+
+  .dq-notify-btn {
+    background: none;
+    border: 1px solid rgba(255,107,53,0.4);
+    color: var(--accent2);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .dq-notify-btn:hover { background: rgba(255,107,53,0.08); }
+
+  /* LETTER PREVIEW MODAL */
+  .letter-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 110;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+  .letter-overlay.visible { display: flex; }
+
+  .letter-modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    max-width: 640px;
+    width: 92%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .letter-modal-header {
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    z-index: 1;
+  }
+
+  .letter-modal-title {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .letter-modal-close {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .letter-modal-close:hover { color: var(--text); }
+
+  .letter-meta {
+    padding: 16px 24px;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--muted);
+    flex-wrap: wrap;
+  }
+
+  .letter-meta span strong { color: var(--text); }
+
+  .letter-body {
+    padding: 24px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--text);
+    white-space: pre-wrap;
+    font-family: var(--font-mono);
+    background: var(--surface2);
+    margin: 16px 24px;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent2);
+  }
+
+  .letter-footer {
+    padding: 16px 24px 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    border-top: 1px solid var(--border);
+  }
+
+  .letter-copy-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .letter-copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .letter-json-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .letter-json-btn:hover { border-color: var(--accent3); color: var(--accent3); }
+
+  .letter-api-note {
+    padding: 12px 24px;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.6;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .letter-api-note::before { content: '🐼'; font-size: 16px; flex-shrink: 0; }
+
+  /* ── PHASE 5 — EMAIL CAPTURE + PDF REPORT ────────── */
+
+  .email-capture {
+    position: relative;
+  }
+
+  /* Upgraded email section layout */
+  .email-capture-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .email-capture-left {
+    padding: 36px 40px;
+    border-right: 1px solid var(--border);
+  }
+
+  .email-capture-right {
+    padding: 36px 40px;
+    background: rgba(0,229,255,0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ec-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .ec-title {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+
+  .ec-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .ec-includes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .ec-include-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .ec-include-item::before {
+    content: '✓';
+    color: var(--accent3);
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+
+  .ec-preview-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .ec-preview-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .ec-download-btn {
+    width: 100%;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 800;
+    padding: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+    margin-bottom: 10px;
+  }
+  .ec-download-btn:hover { background: #00C8E0; }
+
+  /* PDF PREVIEW MODAL */
+  .pdf-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 120;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+  }
+  .pdf-overlay.visible { display: flex; }
+
+  .pdf-modal {
+    background: #fff;
+    width: min(760px, 94vw);
+    max-height: 88vh;
+    overflow-y: auto;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+    color: #111;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .pdf-modal-toolbar {
+    position: sticky;
+    top: 0;
+    background: #1a1a2e;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  .pdf-toolbar-title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #00E5FF;
+    text-transform: uppercase;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .pdf-toolbar-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .pdf-toolbar-btn {
+    background: none;
+    border: 1px solid #2a3a4a;
+    color: #8090a0;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 7px 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .pdf-toolbar-btn:hover { border-color: #00E5FF; color: #00E5FF; }
+  .pdf-toolbar-btn.primary { background: #00E5FF; color: #080C10; border-color: #00E5FF; font-weight: 700; }
+  .pdf-toolbar-btn.primary:hover { background: #00C8E0; }
+
+  /* THE PDF REPORT DOCUMENT */
+  .pdf-report {
+    padding: 48px 52px;
+    background: #fff;
+    color: #111;
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .pdf-report-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 3px solid #080C10;
+    margin-bottom: 32px;
+  }
+
+  .pdf-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #080C10;
+  }
+  .pdf-logo span { color: #00C8E0; }
+
+  .pdf-report-meta {
+    text-align: right;
+    font-size: 11px;
+    color: #666;
+    line-height: 1.8;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .pdf-report-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #080C10;
+    margin-bottom: 6px;
+  }
+
+  .pdf-report-subtitle {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 32px;
+  }
+
+  .pdf-section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #080C10;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+    margin-top: 28px;
+  }
+
+  .pdf-score-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .pdf-score-box {
+    flex: 1;
+    border: 1px solid #e0e0e0;
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  .pdf-score-box .psb-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 6px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .pdf-score-box .psb-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #080C10;
+    line-height: 1;
+  }
+
+  .pdf-score-box .psb-sub {
+    font-size: 10px;
+    color: #999;
+    margin-top: 4px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .pdf-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .pdf-table th {
+    background: #080C10;
+    color: #fff;
+    padding: 9px 12px;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .pdf-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+  }
+
+  .pdf-table tr:last-child td { border-bottom: none; }
+  .pdf-table tr:nth-child(even) td { background: #fafafa; }
+
+  .pdf-badge {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 2px 7px;
+    text-transform: uppercase;
+    font-family: 'DM Mono', monospace;
+    font-weight: 600;
+  }
+  .pdf-badge.neg { background: #fff0f3; color: #cc2244; border: 1px solid #ffccd5; }
+  .pdf-badge.good { background: #f0fff4; color: #1a7a40; border: 1px solid #c3f0d0; }
+  .pdf-badge.warn { background: #fffbf0; color: #a06000; border: 1px solid #ffe4a0; }
+
+  .pdf-action-box {
+    background: #f8f9fa;
+    border-left: 4px solid #00C8E0;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+  }
+
+  .pdf-action-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #080C10;
+    margin-bottom: 4px;
+  }
+
+  .pdf-action-desc {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .pdf-action-link {
+    font-size: 11px;
+    color: #00A8BF;
+    font-family: 'DM Mono', monospace;
+    margin-top: 6px;
+    display: block;
+    text-decoration: none;
+  }
+
+  .pdf-footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #aaa;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .pdf-disclaimer {
+    margin-top: 24px;
+    padding: 14px 16px;
+    background: #f8f8f8;
+    border: 1px solid #e8e8e8;
+    font-size: 10px;
+    color: #888;
+    line-height: 1.6;
+    font-family: 'DM Mono', monospace;
+  }
+
+  @media (max-width: 700px) {
+    .email-capture-grid { grid-template-columns: 1fr; }
+    .email-capture-left { border-right: none; border-bottom: 1px solid var(--border); padding: 28px 24px; }
+    .email-capture-right { padding: 28px 24px; }
+    .pdf-report { padding: 28px 24px; }
+    .pdf-score-row { flex-wrap: wrap; }
+  }
+
+  @media print {
+    body > *:not(.pdf-modal) { display: none !important; }
+    .pdf-modal { position: static !important; max-height: none !important; }
+    .pdf-modal-toolbar { display: none !important; }
+    .pdf-report { padding: 0 !important; }
+  }
+
+  /* ── PARSE GATE (hidden until 4th attempt) ───────── */
+  .gate-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+  }
+  .gate-overlay.visible { display: flex; }
+
+  .gate-modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    max-width: 480px;
+    width: 92%;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .gate-top {
+    background: linear-gradient(135deg, rgba(0,229,255,0.06), rgba(255,107,53,0.04));
+    padding: 36px 36px 28px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .gate-icon { font-size: 40px; margin-bottom: 14px; }
+
+  .gate-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .gate-title {
+    font-family: var(--font-head);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .gate-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  .gate-options {
+    padding: 24px 36px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gate-option-primary {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 800;
+    padding: 16px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .gate-option-primary:hover { background: #00C8E0; }
+  .gate-option-primary .go-sub { font-size: 10px; font-weight: 400; opacity: 0.7; font-family: var(--font-mono); letter-spacing: 1px; }
+
+  .gate-option-secondary {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .gate-option-secondary:hover { border-color: var(--accent2); color: var(--accent2); }
+  .gate-option-secondary .go-sub { font-size: 10px; opacity: 0.6; letter-spacing: 1px; }
+
+  .gate-fine {
+    padding: 0 36px 24px;
+    font-size: 10px;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  .gate-fine a {
+    color: var(--muted);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .gate-fine a:hover { color: var(--text); }
+
+  /* Subtle parse counter — only shows at 2 remaining */
+  .parse-counter {
+    display: none;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 8px 0 0;
+  }
+  .parse-counter.visible { display: block; }
+  .parse-counter.last { color: var(--warn); }
+
+
+  /* ── CONTACT MODAL ───────────────────────────────── */
+  .contact-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 150;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+  }
+  .contact-overlay.visible { display: flex; }
+
+  .contact-modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    width: min(480px, 92vw);
+    animation: fadeIn 0.3s ease;
+    overflow: hidden;
+  }
+
+  .contact-header {
+    background: var(--surface2);
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .contact-title {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .contact-close {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 2px 8px;
+    line-height: 1;
+  }
+  .contact-close:hover { color: var(--text); }
+
+  .contact-body { padding: 24px 28px; }
+
+  .contact-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .contact-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .contact-input {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 11px 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .contact-input:focus { border-color: var(--accent); }
+  .contact-input::placeholder { color: var(--muted); }
+
+  textarea.contact-input {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+  }
+
+  .contact-submit {
+    width: 100%;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 800;
+    padding: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+    margin-top: 6px;
+  }
+  .contact-submit:hover { background: #00C8E0; }
+  .contact-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .contact-success {
+    text-align: center;
+    padding: 32px 28px;
+  }
+
+  .contact-success-icon { font-size: 40px; margin-bottom: 12px; }
+  .contact-success-title { font-family: var(--font-head); font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+  .contact-success-msg { font-size: 12px; color: var(--muted); line-height: 1.8; }
+
+  /* Contact link in footer */
+  .footer-contact-link {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+  }
+  .footer-contact-link:hover { color: var(--accent); }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-text">PARSEUR <span>10X</span></div>
+        <div class="logo-badge">Beta</div>
+      </div>
+      <div class="header-status">
+        <div class="status-dot"></div>
+        AZURE AI ACTIVE
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <!-- UPLOAD STATE -->
+    <div id="uploadState">
+      <div class="hero">
+        <div class="hero-label">Credit Report Intelligence</div>
+        <h1>
+          <div class="line1">Your Credit Report.</div>
+          <div class="line2">Decoded Instantly.</div>
+        </h1>
+        <p>Upload your Equifax, TransUnion, or Experian report and PARSEUR 10X will extract every account, flag every negative item, and surface exactly what to do next.</p>
+      </div>
+
+      <div class="upload-section">
+        <div class="bureau-selector">
+          <button class="bureau-btn active" data-bureau="equifax" onclick="selectBureau(this)">
+            <span class="bureau-name">Equifax</span>
+            <span class="bureau-sub">Digital PDF</span>
+          </button>
+          <button class="bureau-btn" data-bureau="transunion" onclick="selectBureau(this)">
+            <span class="bureau-name">TransUnion</span>
+            <span class="bureau-sub">Digital PDF</span>
+          </button>
+          <button class="bureau-btn" data-bureau="experian" onclick="selectBureau(this)">
+            <span class="bureau-name">Experian</span>
+            <span class="bureau-sub">Now Supported ✓</span>
+          </button>
+        </div>
+
+        <!-- SCAN TYPE PANEL — shown for all bureaus -->
+        <div class="scan-type-panel visible" id="scanTypePanel">
+          <div class="scan-type-label" id="scanTypeLabel">How did you receive your Equifax report?</div>
+          <div class="scan-type-opts">
+            <button class="scan-opt" data-scantype="digital" onclick="selectScanType(this)">
+              <span class="opt-icon">💻</span>
+              <span class="opt-name">Downloaded Online</span>
+              <span class="opt-sub">PDF from annualcreditreport.com — digital text layer</span>
+            </button>
+            <button class="scan-opt" data-scantype="scanned" onclick="selectScanType(this)">
+              <span class="opt-icon">📬</span>
+              <span class="opt-name">Mailed + Scanned</span>
+              <span class="opt-sub">Physical report received by mail, scanned as JPG or PDF</span>
+            </button>
+          </div>
+          <div class="scan-quality-tip" id="scanQualityTip">
+            <strong>📸 Scan Quality Tips</strong>
+            For best results: scan at 300 DPI or higher, ensure good lighting with no shadows, keep pages flat, and save as JPG or PDF. Azure AI Vision handles the rest.
+          </div>
+        </div>
+
+        <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()"
+          ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+          <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" onchange="handleFileSelect(event)">
+          <div class="upload-icon" id="uploadIcon">📄</div>
+          <div class="upload-title" id="uploadTitle">Drop your report here</div>
+          <div class="upload-sub" id="uploadSub">or click to browse your files<br>Supports digital PDFs and scanned images (JPG, PNG)</div>
+          <div class="upload-types" id="uploadTypes">
+            <span class="type-tag" id="tagPDF">PDF</span>
+            <span class="type-tag" id="tagJPG">JPG</span>
+            <span class="type-tag" id="tagPNG">PNG</span>
+            <span class="type-tag" id="tagSecure">Secure</span>
+          </div>
+        </div>
+
+        <div class="file-selected" id="fileSelected">
+          <div class="file-icon">📄</div>
+          <div class="file-info">
+            <div class="file-name" id="fileName"></div>
+            <div class="file-size" id="fileSize"></div>
+          </div>
+          <button class="file-remove" onclick="removeFile()">✕</button>
+        </div>
+
+        <button class="parse-btn" id="parseBtn" onclick="startParsing()">
+          ⚡ Parse Report with Azure AI
+        </button>
+        <div class="parse-counter" id="parseCounter"></div>
+      </div>
+    </div>
+
+    <!-- PROCESSING STATE -->
+    <div id="processingState">
+      <div class="hero" style="padding-bottom: 0;">
+        <div class="processing-label">Azure AI Processing</div>
+        <div id="pipelineBadge" class="pipeline-badge docint">
+          <div class="pipeline-dot"></div>
+          <span id="pipelineBadgeLabel">Document Intelligence Pipeline</span>
+        </div>
+        <div class="loading-bar" style="max-width:400px; margin: 0 auto 24px;">
+          <div class="loading-bar-fill" id="loadingBar"></div>
+        </div>
+        <div class="processing-steps" id="procSteps">
+          <div class="proc-step" id="step1">
+            <div class="proc-step-icon">01</div>
+            <span id="step1Label">Document Intelligence — Extracting text layer</span>
+          </div>
+          <div class="proc-step" id="step2">
+            <div class="proc-step-icon">02</div>
+            Account parser — Identifying all tradelines
+          </div>
+          <div class="proc-step" id="step3">
+            <div class="proc-step-icon">03</div>
+            GPT-4o — Interpreting negative items
+          </div>
+          <div class="proc-step" id="step4">
+            <div class="proc-step-icon">04</div>
+            Dispute engine — Flagging actionable items
+          </div>
+          <div class="proc-step" id="step5">
+            <div class="proc-step-icon">05</div>
+            Affiliate matching — Building recommendations
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS STATE -->
+    <div id="resultsState">
+
+      <!-- EXPERIAN OCR NOTICE -->
+      <div class="experian-ocr-banner" id="experianOCRBanner">
+        <div class="ocr-icon">🔍</div>
+        <div>
+          <strong>Azure AI Vision — OCR Pipeline Used</strong>
+          Your Experian report was processed as a scanned image using Azure AI Vision Read API. Extraction accuracy is high but may vary based on scan quality. Review flagged items carefully.
+        </div>
+      </div>
+
+      <div class="results-header">
+        <div>
+          <div class="results-title">Report Analysis Complete <span class="pipeline-route" id="pipelineRouteTag">DOC INT</span></div>
+          <div class="results-meta">Bureau: <span id="bureauLabel">EQUIFAX</span> &nbsp;·&nbsp; Parsed: <span id="parsedDate"></span> &nbsp;·&nbsp; Powered by Azure AI</div>
+        </div>
+        <button class="parse-again-btn" onclick="resetToUpload()">↩ Parse Another</button>
+      </div>
+
+      <!-- SCORE -->
+      <div class="score-grid">
+        <div class="score-circle">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle class="score-circle-bg" cx="60" cy="60" r="52"/>
+            <circle class="score-circle-fill" id="scoreFill" cx="60" cy="60" r="52"
+              stroke="#FFB800"
+              stroke-dasharray="326.7"
+              stroke-dashoffset="326.7"/>
+          </svg>
+          <div class="score-number">
+            <div class="score-value" id="scoreValue" style="color: #FFB800;">—</div>
+            <div class="score-label">FICO</div>
+          </div>
+        </div>
+        <div class="score-details">
+          <div class="score-factor">
+            <div class="sf-label">Utilization</div>
+            <div class="sf-value" id="sfUtil" style="color: var(--warn);">—</div>
+            <div class="sf-sub">Target: under 30%</div>
+          </div>
+          <div class="score-factor">
+            <div class="sf-label">Negative Items</div>
+            <div class="sf-value" id="sfNeg" style="color: var(--danger);">—</div>
+            <div class="sf-sub">Accounts flagged</div>
+          </div>
+          <div class="score-factor">
+            <div class="sf-label">Accounts</div>
+            <div class="sf-value" id="sfAccounts" style="color: var(--accent);">—</div>
+            <div class="sf-sub">Total tradelines</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEGATIVE ITEMS -->
+      <div class="section-header">
+        <div class="section-title">Negative Items</div>
+        <div class="section-count warn" id="negCount">0 items</div>
+      </div>
+      <div id="negativeList"></div>
+
+      <!-- DISPUTE PANDA — Phase 4 Integration Hook -->
+      <div id="disputePandaSection">
+
+        <div class="section-header" style="margin-top: 0;">
+          <div class="section-title">Dispute Queue <span style="font-size:13px; font-weight:400; color:var(--muted); font-family:var(--font-mono);">· Dispute Panda Ready</span></div>
+          <div class="section-count" id="disputeQueueCount">0 items queued</div>
+        </div>
+
+        <!-- PANDA INTEGRATION BANNER -->
+        <div class="dispute-hook" id="disputePandaBanner">
+          <div class="dispute-hook-text">
+            <strong>🐼 Dispute Panda Integration</strong>
+            Select negative items below to add them to your dispute queue. Letters are pre-formatted and Dispute Panda-ready. When the API goes live, they send automatically.
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-end; flex-shrink:0;">
+            <button class="dispute-btn" onclick="openNotifyModal()">
+              Notify Me at Launch
+              <span>dispute panda · api coming soon</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- DISPUTE QUEUE PANEL — appears as items are added -->
+        <div class="dispute-queue-panel" id="disputeQueuePanel">
+          <div class="dq-header">
+            <div class="dq-title">
+              🐼 Dispute Queue
+              <div class="dq-count" id="dqBadgeCount">0</div>
+            </div>
+            <div class="dq-panda-logo">Dispute Panda · API Ready</div>
+          </div>
+          <div class="dq-items" id="dqItemsList"></div>
+          <div class="dq-actions">
+            <button class="dq-preview-btn" onclick="previewDisputeLetters()">📄 Preview Letters</button>
+            <button class="dq-preview-btn" onclick="exportDisputeJSON()">{ } Export JSON Payload</button>
+            <button class="dq-send-btn" onclick="openNotifyModal()">
+              <span>
+                Send via Dispute Panda
+                <span class="send-sub">api integration · coming soon</span>
+              </span>
+              →
+            </button>
+            <div class="dq-notify-wrap">
+              <input class="dq-notify-input" type="email" placeholder="Get notified when Dispute Panda API launches..." id="dqNotifyEmail">
+              <button class="dq-notify-btn" onclick="submitDQNotify()">Notify Me</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- UTILIZATION -->
+      <div class="section-header" style="margin-top:32px;">
+        <div class="section-title">Credit Utilization</div>
+        <div class="section-count" id="utilCount"></div>
+      </div>
+      <div id="utilizationList"></div>
+
+      <!-- GOOD STANDING -->
+      <div class="section-header">
+        <div class="section-title">Accounts in Good Standing</div>
+        <div class="section-count" id="goodCount"></div>
+      </div>
+      <div id="goodList"></div>
+
+      <!-- AFFILIATE RECOMMENDATIONS — Phase 3 Matching Engine -->
+      <div class="affiliate-section">
+        <div class="section-header">
+          <div class="section-title">Recommended Next Steps</div>
+          <div class="section-count" id="affMatchCount">Analyzing...</div>
+        </div>
+
+        <!-- MATCH ENGINE SUMMARY -->
+        <div class="match-summary" id="matchSummary">
+          <div class="match-summary-label">Match Engine</div>
+          <div class="match-triggers" id="matchTriggerChips"></div>
+          <div class="match-count"><strong id="matchCountNum">0</strong> offers matched</div>
+        </div>
+
+        <!-- FILTER BAR -->
+        <div class="aff-filter-bar" id="affFilterBar">
+          <button class="aff-filter-btn active" data-filter="all" onclick="filterAffiliates(this)">All</button>
+          <button class="aff-filter-btn" data-filter="repair" onclick="filterAffiliates(this)">Credit Repair</button>
+          <button class="aff-filter-btn" data-filter="credit" onclick="filterAffiliates(this)">Cards</button>
+          <button class="aff-filter-btn" data-filter="builder" onclick="filterAffiliates(this)">Credit Building</button>
+          <button class="aff-filter-btn" data-filter="monitor" onclick="filterAffiliates(this)">Monitoring</button>
+          <button class="aff-filter-btn" data-filter="loan" onclick="filterAffiliates(this)">Business</button>
+        </div>
+
+        <div class="affiliate-intro" id="affIntro"></div>
+        <div class="affiliate-grid" id="affiliateGrid"></div>
+      </div>
+
+      <!-- EMAIL CAPTURE -->
+      <div class="email-capture" id="emailCaptureSection">
+        <div class="email-capture-grid">
+
+          <div class="email-capture-left">
+            <div class="ec-label">Get Your PDF Report</div>
+            <div class="ec-title">Get Your Full Credit<br>Action Report</div>
+            <div class="ec-desc">A complete breakdown of your parsed report — formatted as a professional PDF you can save, share, or take to a lender.</div>
+            <div class="ec-includes">
+              <div class="ec-include-item">FICO score summary with range analysis</div>
+              <div class="ec-include-item">Full negative items table with dispute status</div>
+              <div class="ec-include-item">Credit utilization breakdown per account</div>
+              <div class="ec-include-item">Personalized action plan ranked by impact</div>
+              <div class="ec-include-item">Matched resources for your exact situation</div>
+            </div>
+          </div>
+
+          <div class="email-capture-right" id="emailCaptureRight">
+            <div id="emailFormWrap">
+              <div style="font-size:11px; letter-spacing:1px; color:var(--muted); text-transform:uppercase; margin-bottom:16px;">Enter your email to receive your report</div>
+              <div class="email-form" style="flex-direction:column; gap:8px;">
+                <input class="email-input" type="email" placeholder="your@email.com" id="emailInput" style="width:100%; box-sizing:border-box;">
+                <button class="email-submit ec-download-btn" onclick="submitEmail()" style="margin:0;">Send to My Email</button>
+              </div>
+              <button class="ec-preview-btn" onclick="openPDFPreview()" style="margin-top:10px;">👁 Preview Report First</button>
+              <button class="ec-preview-btn" onclick="downloadPDF()" style="margin-top:0;">⬇ Download PDF Now</button>
+              <div class="email-disclaimer" style="margin-top:12px; font-size:10px;">No spam. Unsubscribe anytime. Your data stays private.</div>
+            </div>
+            <div id="emailSuccessWrap" style="display:none; text-align:center; padding:16px 0;">
+              <div style="font-size:36px; margin-bottom:12px;">✓</div>
+              <div style="font-family:var(--font-head); font-size:18px; font-weight:800; margin-bottom:8px;">Report On Its Way</div>
+              <div style="font-size:12px; color:var(--muted); line-height:1.7;" id="emailSuccessMsg"></div>
+              <button class="ec-preview-btn" onclick="openPDFPreview()" style="margin-top:20px;">📄 Preview Your Report</button>
+              <button class="ec-preview-btn" onclick="downloadPDF()" style="margin-top:8px;">⬇ Download PDF</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- PARSE GATE MODAL -->
+<div class="gate-overlay" id="gateOverlay">
+  <div class="gate-modal">
+    <div class="gate-top">
+      <div class="gate-icon">📊</div>
+      <div class="gate-label">You've used your 3 free parses</div>
+      <div class="gate-title">Still working through your credit repair?</div>
+      <div class="gate-desc">Unlock unlimited parsing for $9/month — or keep going with one bureau free each time.</div>
+    </div>
+    <div class="gate-options">
+      <button class="gate-option-primary" onclick="gateUnlockPaid()">
+        <span>Unlock Unlimited Parsing<br><span class="go-sub">$9 / month · cancel anytime</span></span>
+        <span>→</span>
+      </button>
+      <button class="gate-option-secondary" onclick="gateContinueFree()">
+        <span>Continue free — one bureau only<br><span class="go-sub">results limited to single bureau</span></span>
+        <span style="font-size:18px; opacity:0.4;">›</span>
+      </button>
+    </div>
+    <div class="gate-fine">
+      Already a member? <a onclick="gateUnlockPaid()">Sign in to restore access</a>
+      &nbsp;·&nbsp;
+      <a onclick="closeParsePermanently()">Not now — I'm done for today</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT MODAL -->
+<div class="contact-overlay" id="contactOverlay" onclick="handleContactOverlayClick(event)">
+  <div class="contact-modal" id="contactModal">
+    <div class="contact-header">
+      <div class="contact-title">Contact Us</div>
+      <button class="contact-close" onclick="closeContactModal()">✕</button>
+    </div>
+
+    <div id="contactFormWrap">
+      <div class="contact-body">
+        <div class="contact-desc">Have a question about your report, a billing issue, or just want to reach us? We read every message and respond within 24 hours.</div>
+
+        <div class="contact-field">
+          <label class="contact-label">Your Name</label>
+          <input class="contact-input" type="text" id="contactName" placeholder="First and last name">
+        </div>
+
+        <div class="contact-field">
+          <label class="contact-label">Email Address</label>
+          <input class="contact-input" type="email" id="contactEmail" placeholder="your@email.com">
+        </div>
+
+        <div class="contact-field">
+          <label class="contact-label">Subject</label>
+          <select class="contact-input" id="contactSubject" style="cursor:pointer;">
+            <option value="">Select a topic...</option>
+            <option value="report-question">Question about my report</option>
+            <option value="billing">Billing / subscription</option>
+            <option value="technical">Technical issue</option>
+            <option value="dispute">Help with disputes</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+
+        <div class="contact-field">
+          <label class="contact-label">Message</label>
+          <textarea class="contact-input" id="contactMessage" placeholder="Tell us what's going on..."></textarea>
+        </div>
+
+        <button class="contact-submit" id="contactSubmitBtn" onclick="submitContact()">Send Message</button>
+      </div>
+    </div>
+
+    <div id="contactSuccessWrap" style="display:none;" class="contact-success">
+      <div class="contact-success-icon">✓</div>
+      <div class="contact-success-title">Message Received</div>
+      <div class="contact-success-msg">We'll get back to you within 24 hours at the email you provided.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PDF REPORT PREVIEW MODAL -->
+<div class="pdf-overlay" id="pdfOverlay">
+  <div class="pdf-modal" id="pdfModal">
+    <div class="pdf-modal-toolbar">
+      <div class="pdf-toolbar-title">📄 Credit Report · PARSEUR 10X</div>
+      <div class="pdf-toolbar-actions">
+        <button class="pdf-toolbar-btn" onclick="closePDFPreview()">✕ Close</button>
+        <button class="pdf-toolbar-btn primary" onclick="downloadPDF()">⬇ Download PDF</button>
+      </div>
+    </div>
+    <div class="pdf-report" id="pdfReportContent">
+      <!-- Generated by buildPDFReport() -->
+    </div>
+  </div>
+</div>
+
+<!-- LETTER PREVIEW MODAL -->
+<div class="letter-overlay" id="letterOverlay">
+  <div class="letter-modal">
+    <div class="letter-modal-header">
+      <div class="letter-modal-title">📄 Dispute Letter Preview</div>
+      <button class="letter-modal-close" onclick="closeLetterModal()">✕</button>
+    </div>
+    <div class="letter-meta" id="letterMeta"></div>
+    <div class="letter-body" id="letterBody"></div>
+    <div class="letter-api-note">
+      When Dispute Panda API launches, this letter will be sent directly from your queue — certified mail tracking included. Until then, you can copy and send manually.
+    </div>
+    <div class="letter-footer">
+      <button class="letter-json-btn" onclick="exportDisputeJSON()">{ } Copy JSON Payload</button>
+      <button class="letter-copy-btn" onclick="copyLetter()">Copy Letter Text</button>
+    </div>
+  </div>
+</div>
+
+<!-- VALIDATION SURVEY MODAL -->
+<div class="survey-overlay" id="surveyOverlay">
+  <div class="survey-modal">
+    <button class="survey-close" onclick="closeSurvey()">✕</button>
+    <div class="survey-tag">Quick Survey</div>
+    <h2>Help Us Improve Experian Support</h2>
+    <p>You're one of the first to use Experian parsing. Your answers shape how we build. Takes 30 seconds.</p>
+
+    <div class="survey-q">
+      <div class="survey-q-label">How did you receive your Experian report?</div>
+      <div class="survey-opts" id="q1opts">
+        <button class="survey-opt" data-val="mailed" onclick="selectSurveyOpt(this,'q1')">
+          <div class="survey-opt-radio"></div>
+          Mailed to me — I had to wait and scan it
+        </button>
+        <button class="survey-opt" data-val="online" onclick="selectSurveyOpt(this,'q1')">
+          <div class="survey-opt-radio"></div>
+          Downloaded online — available immediately
+        </button>
+        <button class="survey-opt" data-val="both" onclick="selectSurveyOpt(this,'q1')">
+          <div class="survey-opt-radio"></div>
+          Both options were available to me
+        </button>
+        <button class="survey-opt" data-val="unsure" onclick="selectSurveyOpt(this,'q1')">
+          <div class="survey-opt-radio"></div>
+          Not sure / can't remember
+        </button>
+      </div>
+    </div>
+
+    <div class="survey-q">
+      <div class="survey-q-label">How was the OCR quality on your scanned report?</div>
+      <div class="survey-opts" id="q2opts">
+        <button class="survey-opt" data-val="great" onclick="selectSurveyOpt(this,'q2')">
+          <div class="survey-opt-radio"></div>
+          Great — all accounts extracted correctly
+        </button>
+        <button class="survey-opt" data-val="mostly" onclick="selectSurveyOpt(this,'q2')">
+          <div class="survey-opt-radio"></div>
+          Mostly good — a few items looked off
+        </button>
+        <button class="survey-opt" data-val="issues" onclick="selectSurveyOpt(this,'q2')">
+          <div class="survey-opt-radio"></div>
+          Several extraction issues I noticed
+        </button>
+        <button class="survey-opt" data-val="na" onclick="selectSurveyOpt(this,'q2')">
+          <div class="survey-opt-radio"></div>
+          N/A — I used the digital version
+        </button>
+      </div>
+    </div>
+
+    <button class="survey-submit" id="surveySubmitBtn" onclick="submitSurvey()" disabled>
+      Submit Feedback
+    </button>
+    <span class="survey-skip" onclick="closeSurvey()">Skip for now</span>
+  </div>
+</div>
+
+<footer>
+  <div class="container" style="display:flex; width:100%; justify-content:space-between; align-items:center;">
+    <div class="footer-logo">PARSEUR <span>10X</span></div>
+    <div class="footer-text">Powered by Azure Document Intelligence + Azure AI Vision + OpenAI &nbsp;·&nbsp; <button class="footer-contact-link" onclick="openContactModal()">Contact</button></div>
+  </div>
+</footer>
+
+<script>
+  let selectedFile = null;
+  let selectedBureau = 'equifax';
+  let selectedScanType = null; // 'digital' | 'scanned'
+  let detectedPipeline = 'docint'; // 'docint' | 'vision'
+  let surveyAnswers = { q1: null, q2: null };
+
+  // ── BUREAU SELECTION ──────────────────────────────
+  function selectBureau(btn) {
+    document.querySelectorAll('.bureau-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedBureau = btn.dataset.bureau;
+
+    const bureauNames = { equifax: 'Equifax', transunion: 'TransUnion', experian: 'Experian' };
+    const fileInput = document.getElementById('fileInput');
+
+    // Update label for whichever bureau is selected
+    document.getElementById('scanTypeLabel').textContent =
+      'How did you receive your ' + bureauNames[selectedBureau] + ' report?';
+
+    // Experian also accepts images; others PDF only
+    if (selectedBureau === 'experian') {
+      fileInput.accept = '.pdf,.jpg,.jpeg,.png';
+      updateUploadZoneForExperian();
+    } else {
+      fileInput.accept = '.pdf';
+      resetUploadZone();
+      document.getElementById('scanQualityTip').classList.remove('visible');
+    }
+
+    // Reset scan type selection when switching bureau
+    document.querySelectorAll('.scan-opt').forEach(o => o.classList.remove('active'));
+    selectedScanType = null;
+    detectedPipeline = 'docint';
+    removeFile();
+  }
+
+  function updateUploadZoneForExperian() {
+    document.getElementById('uploadTitle').textContent = 'Drop your Experian report here';
+    document.getElementById('uploadSub').textContent = 'Accepts digital PDF or scanned image (JPG, PNG)\nAzure AI Vision handles scanned documents automatically';
+    document.getElementById('uploadIcon').textContent = '🔍';
+    document.getElementById('tagJPG').classList.add('active-type');
+    document.getElementById('tagPNG').classList.add('active-type');
+  }
+
+  function resetUploadZone() {
+    document.getElementById('uploadTitle').textContent = 'Drop your report here';
+    document.getElementById('uploadSub').innerHTML = 'or click to browse your files<br>Supports digital PDF exports from annualcreditreport.com';
+    document.getElementById('uploadIcon').textContent = '📄';
+    document.getElementById('tagJPG').classList.remove('active-type');
+    document.getElementById('tagPNG').classList.remove('active-type');
+  }
+
+  // ── SCAN TYPE SELECTION ───────────────────────────
+  function selectScanType(btn) {
+    document.querySelectorAll('.scan-opt').forEach(o => o.classList.remove('active'));
+    btn.classList.add('active');
+    selectedScanType = btn.dataset.scantype;
+
+    const tip = document.getElementById('scanQualityTip');
+    if (selectedScanType === 'scanned') {
+      tip.classList.add('visible');
+      detectedPipeline = 'vision';
+    } else {
+      tip.classList.remove('visible');
+      detectedPipeline = 'docint';
+    }
+  }
+
+  // ── FILE HANDLING ─────────────────────────────────
+  function handleFileSelect(e) {
+    const file = e.target.files[0];
+    if (file) handleFile(file);
+  }
+
+  function handleDragOver(e) {
+    e.preventDefault();
+    document.getElementById('uploadZone').classList.add('dragover');
+  }
+
+  function handleDragLeave() {
+    document.getElementById('uploadZone').classList.remove('dragover');
+  }
+
+  function handleDrop(e) {
+    e.preventDefault();
+    document.getElementById('uploadZone').classList.remove('dragover');
+    const file = e.dataTransfer.files[0];
+    if (file) handleFile(file);
+  }
+
+  function handleFile(file) {
+    const allowed = ['application/pdf','image/jpeg','image/jpg','image/png'];
+    if (!allowed.includes(file.type)) {
+      alert('Please upload a PDF, JPG, or PNG file.');
+      return;
+    }
+
+    // Auto-detect pipeline: if image file, force vision pipeline
+    if (file.type.startsWith('image/')) {
+      detectedPipeline = 'vision';
+      // If Experian + scanned not explicitly chosen, auto-set
+      if (selectedBureau === 'experian' && !selectedScanType) {
+        const scannedOpt = document.querySelector('[data-scantype="scanned"]');
+        if (scannedOpt) selectScanType(scannedOpt);
+      }
+    } else if (file.type === 'application/pdf' && selectedBureau !== 'experian') {
+      detectedPipeline = 'docint';
+    }
+    // For Experian PDF: respect user's declared scan type, or will detect at parse time
+
+    setFile(file);
+  }
+
+  function setFile(file) {
+    selectedFile = file;
+    const isImage = file.type.startsWith('image/');
+    const ext = isImage ? 'Image' : 'PDF';
+    document.getElementById('fileName').textContent = file.name;
+    document.getElementById('fileSize').textContent =
+      (file.size / 1024).toFixed(1) + ' KB — ' + ext + ' · Pipeline: ' +
+      (detectedPipeline === 'vision' ? 'Azure Vision OCR' : 'Document Intelligence');
+    document.getElementById('fileSelected').classList.add('visible');
+    document.getElementById('parseBtn').classList.add('visible');
+  }
+
+  function removeFile() {
+    selectedFile = null;
+    document.getElementById('fileSelected').classList.remove('visible');
+    document.getElementById('parseBtn').classList.remove('visible');
+    document.getElementById('fileInput').value = '';
+  }
+
+  // ── PARSING ───────────────────────────────────────
+  // ── PARSE GATE ────────────────────────────────────
+  const GATE_KEY = 'p10x_parses';
+  const FREE_LIMIT = 3;
+  let gateAllowOneBureau = false;
+
+  function getParseCount() {
+    return parseInt(localStorage.getItem(GATE_KEY) || '0', 10);
+  }
+
+  function incrementParseCount() {
+    const n = getParseCount() + 1;
+    localStorage.setItem(GATE_KEY, n);
+    return n;
+  }
+
+  function checkGate() {
+    // Returns true if allowed to parse, false if gate should show
+    const count = getParseCount();
+    return count < FREE_LIMIT;
+  }
+
+  function updateParseCounter() {
+    const count = getParseCount();
+    const remaining = FREE_LIMIT - count;
+    const el = document.getElementById('parseCounter');
+
+    if (remaining === 1) {
+      el.textContent = '1 free parse remaining';
+      el.className = 'parse-counter visible last';
+    } else if (remaining === 2) {
+      el.textContent = '2 free parses remaining';
+      el.className = 'parse-counter visible';
+    } else {
+      el.className = 'parse-counter';
+    }
+  }
+
+  function showParseGate() {
+    document.getElementById('gateOverlay').classList.add('visible');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function gateUnlockPaid() {
+    if (!API_BASE) {
+      showToast('Payment integration — set API_BASE to activate');
+      return;
+    }
+    fetch(`${API_BASE}/api/stripe-link`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          showToast('Payment not yet configured — check back soon');
+        }
+      })
+      .catch(() => showToast('Could not reach payment server — try again'));
+  }
+
+  function gateContinueFree() {
+    // Allow one more parse, single bureau mode
+    gateAllowOneBureau = true;
+    document.getElementById('gateOverlay').classList.remove('visible');
+    document.body.style.overflow = '';
+    // Proceed with parse — already queued
+    proceedWithParse();
+  }
+
+  function closeParsePermanently() {
+    document.getElementById('gateOverlay').classList.remove('visible');
+    document.body.style.overflow = '';
+    // Send them back to upload state cleanly
+    document.getElementById('uploadState').style.display = 'block';
+  }
+
+  // ── GATE-AWARE PARSE INITIATOR ────────────────────
+  function startParsing() {
+    if (checkGate()) {
+      incrementParseCount();
+      updateParseCounter();
+      proceedWithParse();
+    } else {
+      showParseGate();
+    }
+  }
+
+  function proceedWithParse() {
+    // Validate Experian scan type selection
+    if (selectedBureau === 'experian' && !selectedScanType && selectedFile) {
+      // Auto-detect from file type
+      if (selectedFile.type.startsWith('image/')) {
+        detectedPipeline = 'vision';
+      }
+    }
+
+    document.getElementById('uploadState').style.display = 'none';
+    document.getElementById('processingState').classList.add('visible');
+
+    // Update pipeline badge
+    const badge = document.getElementById('pipelineBadge');
+    const badgeLabel = document.getElementById('pipelineBadgeLabel');
+    const step1Label = document.getElementById('step1Label');
+
+    if (detectedPipeline === 'vision') {
+      badge.className = 'pipeline-badge vision';
+      badgeLabel.textContent = 'Azure AI Vision — OCR Pipeline';
+      step1Label.textContent = 'AI Vision Read API — Image preprocessing + OCR';
+    } else {
+      badge.className = 'pipeline-badge docint';
+      badgeLabel.textContent = 'Document Intelligence Pipeline';
+      step1Label.textContent = 'Document Intelligence — Extracting text layer';
+    }
+
+    runProcessingAnimation();
+  }
+
+  function runProcessingAnimation() {
+    const steps = ['step1','step2','step3','step4','step5'];
+    const bar = document.getElementById('loadingBar');
+
+    // Vision pipeline is slightly slower (OCR preprocessing)
+    const delays = detectedPipeline === 'vision'
+      ? [0, 1500, 2900, 4200, 5300]
+      : [0, 1200, 2400, 3600, 4600];
+    const durations = [1200, 1200, 1200, 1000, 800];
+
+    steps.forEach((id, i) => {
+      setTimeout(() => {
+        document.getElementById(id).classList.add('active');
+        bar.style.width = ((i+1)/steps.length * 100) + '%';
+      }, delays[i]);
+
+      setTimeout(() => {
+        document.getElementById(id).classList.remove('active');
+        document.getElementById(id).classList.add('done');
+        document.getElementById(id).querySelector('.proc-step-icon').textContent = '✓';
+      }, delays[i] + durations[i]);
+    });
+
+    const finishTime = detectedPipeline === 'vision' ? 7000 : 5800;
+    setTimeout(() => {
+      if (API_BASE) {
+        callParseAPI(); // real backend
+      } else {
+        showResults(null); // dev mock
+      }
+    }, finishTime);
+  }
+
+  // ── API CONFIGURATION ────────────────────────────
+  // Set this to your deployed backend URL.
+  // Leave as null to use mock data (development mode).
+  const API_BASE = null; // e.g. 'https://parseur10x-api.railway.app'
+
+  function showResults(apiData) {
+    document.getElementById('processingState').classList.remove('visible');
+
+    const data = apiData || generateMockData();
+    parsedReportData = data;
+    renderResults(data);
+
+    document.getElementById('resultsState').classList.add('visible');
+    setTimeout(() => animateScore(data.score), 300);
+
+    // Show Experian OCR banner if vision pipeline used
+    if (detectedPipeline === 'vision') {
+      document.getElementById('experianOCRBanner').classList.add('visible');
+    }
+
+    // Update pipeline route tag
+    const routeTag = document.getElementById('pipelineRouteTag');
+    if (detectedPipeline === 'vision') {
+      routeTag.textContent = 'AI VISION OCR';
+      routeTag.className = 'pipeline-route vision';
+    } else {
+      routeTag.textContent = 'DOC INTELLIGENCE';
+      routeTag.className = 'pipeline-route docint';
+    }
+
+    // Show survey after delay if Experian
+    if (selectedBureau === 'experian') {
+      setTimeout(() => document.getElementById('surveyOverlay').classList.add('visible'), 3500);
+    }
+  }
+
+  async function callParseAPI() {
+    if (!selectedFile) return;
+
+    const formData = new FormData();
+    formData.append('file', selectedFile);
+    formData.append('bureau', selectedBureau);
+    formData.append('pipeline', detectedPipeline);
+
+    try {
+      const res = await fetch(`${API_BASE}/api/parse`, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error || `Server error ${res.status}`);
+      }
+
+      const json = await res.json();
+
+      // Sync pipeline from backend response
+      if (json.pipeline) detectedPipeline = json.pipeline;
+
+      showResults(json.data);
+
+    } catch (err) {
+      console.error('[API ERROR]', err.message);
+      // Show error in results area
+      document.getElementById('processingState').classList.remove('visible');
+      document.getElementById('resultsState').classList.add('visible');
+      document.getElementById('resultsState').innerHTML = `
+        <div style="text-align:center; padding: 80px 24px;">
+          <div style="font-size:40px; margin-bottom:16px;">⚠️</div>
+          <div style="font-family:var(--font-head); font-size:20px; font-weight:800; margin-bottom:10px;">Parse Failed</div>
+          <div style="font-size:12px; color:var(--muted); margin-bottom:24px;">${err.message}</div>
+          <button class="parse-btn" onclick="resetToUpload()" style="max-width:200px; margin:0 auto;">Try Again</button>
+        </div>
+      `;
+    }
+  }
+
+  function generateMockData() {
+    const isExperian = selectedBureau === 'experian';
+    return {
+      score: isExperian ? 588 : 612,
+      bureau: selectedBureau.toUpperCase(),
+      utilization: isExperian ? 81 : 74,
+      totalAccounts: isExperian ? 11 : 9,
+      negativeCount: isExperian ? 4 : 3,
+      negatives: isExperian ? [
+        { name: 'MIDLAND CREDIT MGMT', type: 'Collection', balance: '$1,240', opened: 'Mar 2021', status: 'collection', bureau: 'experian' },
+        { name: 'CAPITAL ONE AUTO', type: '90 Days Late', balance: '$8,400', opened: 'Nov 2019', status: 'late' },
+        { name: 'SYNCB/CARE CREDIT', type: 'Charge-Off', balance: '$2,100', opened: 'Jul 2020', status: 'collection' },
+        { name: 'PORTFOLIO RECOVERY', type: 'Collection', balance: '$780', opened: 'Jan 2022', status: 'collection' }
+      ] : [
+        { name: 'MIDLAND CREDIT MGMT', type: 'Collection', balance: '$1,240', opened: 'Mar 2021', status: 'collection', bureau: selectedBureau },
+        { name: 'CAPITAL ONE AUTO', type: '90 Days Late', balance: '$8,400', opened: 'Nov 2019', status: 'late' },
+        { name: 'SYNCB/CARE CREDIT', type: 'Charge-Off', balance: '$2,100', opened: 'Jul 2020', status: 'collection' }
+      ],
+      utilAccounts: [
+        { name: 'Chase Freedom', limit: 2000, balance: 1840 },
+        { name: 'Discover It', limit: 3500, balance: 2900 },
+        { name: 'Citi Double Cash', limit: 1500, balance: 620 }
+      ],
+      goodAccounts: [
+        { name: 'WELLS FARGO MORTGAGE', type: 'Mortgage', since: '2018' },
+        { name: 'AMERICAN EXPRESS', type: 'Credit Card', since: '2016' },
+        { name: 'NAVIENT', type: 'Student Loan', since: '2010' }
+      ],
+      hardInquiries: isExperian ? 5 : 3
+    };
+  }
+
+  function animateScore(score) {
+    const max = 850;
+    const circumference = 326.7;
+    const pct = score / max;
+    const offset = circumference - (pct * circumference);
+    const color = score >= 740 ? '#7BFF6A' : score >= 670 ? '#00E5FF' : score >= 580 ? '#FFB800' : '#FF3B5C';
+
+    const fill = document.getElementById('scoreFill');
+    fill.style.stroke = color;
+    fill.style.strokeDashoffset = offset;
+
+    const val = document.getElementById('scoreValue');
+    val.style.color = color;
+
+    let current = 500;
+    const increment = (score - 500) / 40;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= score) { current = score; clearInterval(timer); }
+      val.textContent = Math.round(current);
+    }, 30);
+  }
+
+  function renderResults(data) {
+    document.getElementById('bureauLabel').textContent = data.bureau;
+    document.getElementById('parsedDate').textContent = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    document.getElementById('sfUtil').textContent = data.utilization + '%';
+    document.getElementById('sfNeg').textContent = data.negativeCount;
+    document.getElementById('sfAccounts').textContent = data.totalAccounts;
+    document.getElementById('negCount').textContent = data.negativeCount + ' items found';
+
+    const negList = document.getElementById('negativeList');
+    negList.innerHTML = data.negatives.map((item, i) => `
+      <div class="negative-item" id="negItem${i}">
+        <div style="flex:1;">
+          <div class="ni-name">${item.name}</div>
+          <div class="ni-meta">
+            <span>Balance: ${item.balance}</span>
+            <span>Opened: ${item.opened}</span>
+            <span>Bureau: ${(item.bureau || selectedBureau).toUpperCase()}</span>
+          </div>
+          <button class="dispute-item-btn" id="dispBtn${i}" onclick="toggleDisputeItem(${i})">
+            <div class="btn-dot"></div>
+            Add to Dispute Queue
+          </button>
+        </div>
+        <div class="ni-badge ${item.status}">${item.type}</div>
+      </div>
+    `).join('');
+
+    const utilList = document.getElementById('utilizationList');
+    document.getElementById('utilCount').textContent = 'Overall: ' + data.utilization + '%';
+    utilList.innerHTML = data.utilAccounts.map(a => {
+      const pct = Math.round((a.balance / a.limit) * 100);
+      const color = pct > 70 ? '#FF3B5C' : pct > 30 ? '#FFB800' : '#7BFF6A';
+      return `
+        <div class="util-bar-wrap">
+          <div class="util-header">
+            <div class="util-name">${a.name}</div>
+            <div class="util-pct" style="color:${color}">${pct}%</div>
+          </div>
+          <div class="util-track">
+            <div class="util-fill" style="width:0%; background:${color}" data-target="${pct}"></div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    setTimeout(() => {
+      document.querySelectorAll('.util-fill').forEach(bar => {
+        bar.style.width = bar.dataset.target + '%';
+      });
+    }, 600);
+
+    const goodList = document.getElementById('goodList');
+    document.getElementById('goodCount').textContent = data.goodAccounts.length + ' accounts';
+    goodList.innerHTML = data.goodAccounts.map(a => `
+      <div class="good-item">
+        <div>
+          <div class="gi-name">${a.name}</div>
+          <div class="gi-meta">${a.type} · Since ${a.since}</div>
+        </div>
+        <div class="gi-badge">Current</div>
+      </div>
+    `).join('');
+
+    // ── PHASE 3: AFFILIATE MATCHING ENGINE ───────────
+    const matched = buildAffiliateMatches(data);
+    renderAffiliateEngine(data, matched);
+  }
+
+  // ── FULL AFFILIATE CATALOG ────────────────────────
+  const AFFILIATE_CATALOG = [
+    {
+      id: 'credit-repair-accelerator',
+      type: 'repair',
+      name: 'Credit Repair Accelerator',
+      desc: 'The exact dispute system for removing collections, errors, and charge-offs yourself — no monthly fees, no repair company. 10 modules + letter templates.',
+      cta: 'See the Full Dispute System — $127',
+      href: 'https://creditfasttrack10x.live/credit-repair',
+      urgency: null,
+      conditions: (d) => d.negativeCount >= 1,
+      score: (d) => {
+        let s = 0;
+        if (d.negativeCount >= 1) s += 50;
+        if (d.negativeCount >= 3) s += 25;
+        if (d.hasCollections) s += 15;
+        if (d.hasChargeOffs) s += 10;
+        return s;
+      },
+      reasons: (d) => {
+        const r = [];
+        if (d.negativeCount >= 1) r.push(d.negativeCount + ' negative item' + (d.negativeCount > 1 ? 's' : '') + ' found');
+        if (d.hasCollections) r.push('collections detected');
+        if (d.hasChargeOffs) r.push('charge-offs present');
+        if (d.hasLatePay) r.push('late payments flagged');
+        return r;
+      }
+    },
+    {
+      id: 'credit-fast-track',
+      type: 'builder',
+      name: 'Credit Fast Track 10X',
+      desc: 'Go from zero or thin credit to 700+ in 90 days. 9 modules covering secured cards, authorized user strategy, and the 5 score-building habits that actually move the needle.',
+      cta: 'Get the 90-Day System — $67',
+      href: 'https://creditfasttrack10x.live/',
+      urgency: null,
+      conditions: (d) => d.score < 700 || d.thinFile || d.goodAccounts < 4,
+      score: (d) => {
+        let s = 0;
+        if (d.thinFile) s += 50;
+        if (d.score < 580) s += 40;
+        if (d.score < 660) s += 25;
+        if (d.goodAccounts < 3) s += 20;
+        return s;
+      },
+      reasons: (d) => {
+        const r = [];
+        if (d.thinFile) r.push('thin credit file');
+        if (d.score < 660) r.push('score: ' + d.score);
+        if (d.goodAccounts < 4) r.push('limited positive history');
+        r.push('90-day roadmap');
+        return r;
+      }
+    },
+    {
+      id: 'balance-transfer',
+      type: 'credit',
+      name: 'Best Balance Transfer Cards',
+      desc: '0% APR for 15–21 months. Move your high-balance cards here and immediately drop your utilization ratio.',
+      cta: 'Compare 0% APR Offers',
+      href: '#',
+      urgency: 'Rates may increase — lock in 0% APR now',
+      conditions: (d) => d.utilization > 30,
+      score: (d) => {
+        let s = 0;
+        if (d.utilization > 30) s += 30;
+        if (d.utilization > 50) s += 25;
+        if (d.utilization > 70) s += 25;
+        if (d.score >= 640) s += 20; // need decent score for approval
+        return s;
+      },
+      reasons: (d) => {
+        const r = ['utilization: ' + d.utilization + '%'];
+        if (d.utilization > 70) r.push('critical utilization');
+        if (d.score >= 640) r.push('likely to qualify');
+        return r;
+      }
+    },
+    {
+      id: 'secured-card',
+      type: 'credit',
+      name: 'Secured Credit Cards',
+      desc: 'Rebuild credit with a secured card that reports to all 3 bureaus. Low deposit, high credit-building impact.',
+      cta: 'See Top Secured Cards',
+      href: '#',
+      conditions: (d) => d.score < 640 || d.thinFile,
+      score: (d) => {
+        let s = 0;
+        if (d.score < 580) s += 50;
+        if (d.score < 640) s += 30;
+        if (d.thinFile) s += 30;
+        if (d.negativeCount >= 2) s += 10;
+        return s;
+      },
+      reasons: (d) => {
+        const r = [];
+        if (d.score < 640) r.push('score: ' + d.score);
+        if (d.thinFile) r.push('thin credit file');
+        r.push('rebuilding path');
+        return r;
+      }
+    },
+    {
+      id: 'business-credit-unleashed',
+      type: 'loan',
+      name: 'Business Credit Unleashed',
+      desc: 'Build a business credit profile separate from your personal FICO — no personal guarantee required. Works even if your personal credit is below 600.',
+      cta: 'See the No-PG System — $197',
+      href: 'https://creditfasttrack10x.live/business-credit',
+      urgency: null,
+      conditions: () => true,
+      score: (d) => {
+        let s = 15; // always relevant — contextual upsell
+        if (d.score < 620) s += 25; // personal credit damaged, business path is valuable
+        if (d.negativeCount >= 2) s += 15;
+        return s;
+      },
+      reasons: (d) => {
+        const r = ['separate from personal credit'];
+        if (d.score < 620) r.push('works with damaged personal credit');
+        r.push('no personal guarantee');
+        return r;
+      }
+    },
+    {
+      id: 'credit-builder-loan',
+      type: 'builder',
+      name: 'Credit Builder Loans',
+      desc: 'Reports to Equifax, TransUnion, and Experian. Build positive payment history while saving money. No credit check required.',
+      cta: 'Explore Builder Loans',
+      href: '#',
+      conditions: (d) => d.thinFile || d.score < 660 || d.goodAccounts < 3,
+      score: (d) => {
+        let s = 0;
+        if (d.thinFile) s += 45;
+        if (d.goodAccounts < 3) s += 25;
+        if (d.score < 620) s += 20;
+        if (d.negativeCount === 0) s += 10; // clean file, just building
+        return s;
+      },
+      reasons: (d) => {
+        const r = [];
+        if (d.thinFile) r.push('thin file');
+        if (d.goodAccounts < 3) r.push('limited positive history');
+        r.push('all 3 bureaus');
+        return r;
+      }
+    },
+    {
+      id: 'experian-boost',
+      type: 'builder',
+      name: 'Experian Boost',
+      desc: 'Instantly add utility, phone, and streaming payments to your Experian report. Free. Average boost: +13 points.',
+      cta: 'Boost Your Score Free',
+      href: '#',
+      conditions: (d) => d.score < 720,
+      score: (d) => {
+        let s = 0;
+        if (d.score < 660) s += 40;
+        if (d.score < 700) s += 20;
+        if (d.thinFile) s += 20;
+        s += 10; // always somewhat useful
+        return s;
+      },
+      reasons: (d) => {
+        const r = ['free · instant'];
+        if (d.score < 700) r.push('score boost potential');
+        return r;
+      }
+    },
+    {
+      id: 'credit-monitoring',
+      type: 'monitor',
+      name: 'Identity Guard Credit Monitoring',
+      desc: 'Real-time alerts for new accounts, score changes, and dark web exposure. Essential during active dispute process.',
+      cta: 'Start Monitoring',
+      href: '#',
+      conditions: () => true, // always shown
+      score: (d) => {
+        let s = 20; // base
+        if (d.negativeCount >= 1) s += 20;
+        if (d.hardInquiries > 2) s += 15;
+        if (d.hasCollections) s += 10;
+        return s;
+      },
+      reasons: () => ['recommended · always on', 'dispute tracking']
+    },
+    {
+      id: 'debt-consolidation',
+      type: 'loan',
+      name: 'Debt Consolidation Loan',
+      desc: 'Combine multiple high-interest debts into one fixed payment. Lower rate, lower utilization, one monthly bill.',
+      cta: 'Check Your Rate (No Hard Pull)',
+      href: '#',
+      urgency: 'Soft pull only — won\'t affect your score',
+      conditions: (d) => d.utilization > 50 && d.score >= 580,
+      score: (d) => {
+        let s = 0;
+        if (d.utilization > 50) s += 35;
+        if (d.utilization > 70) s += 25;
+        if (d.score >= 600) s += 20;
+        if (d.score >= 650) s += 10;
+        return s;
+      },
+      reasons: (d) => {
+        const r = ['utilization: ' + d.utilization + '%'];
+        if (d.score >= 580) r.push('likely to qualify');
+        r.push('no hard pull');
+        return r;
+      }
+    },
+    {
+      id: 'inquiry-removal',
+      type: 'repair',
+      name: 'Hard Inquiry Removal Service',
+      desc: 'Unauthorized or outdated hard inquiries can be disputed and removed. Each removal can add 2–5 points.',
+      cta: 'Dispute Inquiries Now',
+      href: '#',
+      conditions: (d) => d.hardInquiries > 3,
+      score: (d) => {
+        let s = 0;
+        if (d.hardInquiries > 3) s += 40;
+        if (d.hardInquiries > 6) s += 30;
+        return s;
+      },
+      reasons: (d) => [d.hardInquiries + ' hard inquiries', '2–5 pts per removal']
+    }
+  ];
+
+  // ── MATCHING LOGIC ────────────────────────────────
+  function buildAffiliateMatches(data) {
+    // Enrich data with derived signals
+    const enriched = {
+      ...data,
+      hasCollections: data.negatives.some(n => n.status === 'collection'),
+      hasChargeOffs: data.negatives.some(n => n.type === 'Charge-Off'),
+      hasLatePay: data.negatives.some(n => n.status === 'late'),
+      thinFile: data.totalAccounts < 4,
+      goodAccounts: data.goodAccounts.length,
+      hardInquiries: data.hardInquiries || 2
+    };
+
+    return AFFILIATE_CATALOG
+      .filter(offer => offer.conditions(enriched))
+      .map(offer => ({
+        ...offer,
+        matchScore: offer.score(enriched),
+        matchReasons: offer.reasons(enriched)
+      }))
+      .sort((a, b) => b.matchScore - a.matchScore);
+  }
+
+  // ── TRIGGER CHIPS ─────────────────────────────────
+  function buildTriggerChips(data) {
+    const chips = [];
+    if (data.negativeCount >= 1) chips.push({ label: data.negativeCount + ' negatives', critical: true });
+    if (data.utilization > 70) chips.push({ label: 'util ' + data.utilization + '%', critical: true });
+    else if (data.utilization > 30) chips.push({ label: 'util ' + data.utilization + '%', active: true });
+    if (data.score < 580) chips.push({ label: 'score ' + data.score, critical: true });
+    else if (data.score < 670) chips.push({ label: 'score ' + data.score, active: true });
+    if (data.totalAccounts < 4) chips.push({ label: 'thin file', active: true });
+    if ((data.hardInquiries || 0) > 3) chips.push({ label: (data.hardInquiries || 0) + ' inquiries', active: true });
+    chips.push({ label: 'monitoring', active: false });
+    return chips;
+  }
+
+  // ── RENDER AFFILIATE ENGINE ───────────────────────
+  let allMatches = [];
+  let activeFilter = 'all';
+
+  function renderAffiliateEngine(data, matches) {
+    allMatches = matches;
+
+    // Intro copy
+    const introEl = document.getElementById('affIntro');
+    const topIssue = data.negativeCount > 0
+      ? `PARSEUR 10X detected <strong>${data.negativeCount} negative item${data.negativeCount > 1 ? 's' : ''}</strong> and <strong>${data.utilization}% utilization</strong> on your ${data.bureau} report.`
+      : `Your ${data.bureau} report shows <strong>${data.utilization}% utilization</strong> with no negative items.`;
+    introEl.innerHTML = topIssue + ' These offers are ranked by relevance to your exact situation — highest match first.';
+
+    // Trigger chips
+    const chips = buildTriggerChips(data);
+    document.getElementById('matchTriggerChips').innerHTML = chips.map(c =>
+      `<div class="match-trigger-chip ${c.critical ? 'critical' : c.active ? 'active' : ''}">
+        <div class="chip-dot"></div>${c.label}
+      </div>`
+    ).join('');
+
+    document.getElementById('matchCountNum').textContent = matches.length;
+    document.getElementById('affMatchCount').textContent = matches.length + ' offers matched';
+
+    renderFilteredAffiliates();
+  }
+
+  function filterAffiliates(btn) {
+    document.querySelectorAll('.aff-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    renderFilteredAffiliates();
+  }
+
+  function renderFilteredAffiliates() {
+    const filtered = activeFilter === 'all'
+      ? allMatches
+      : allMatches.filter(m => m.type === activeFilter);
+
+    const grid = document.getElementById('affiliateGrid');
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `<div class="no-matches">No offers in this category matched your report profile.</div>`;
+      return;
+    }
+
+    grid.innerHTML = filtered.map((a, i) => {
+      const isTopPick = i === 0 && activeFilter === 'all';
+      const matchLevel = a.matchScore >= 70 ? 'high' : a.matchScore >= 40 ? 'medium' : 'low';
+      const matchLabel = matchLevel === 'high' ? '★ Top Match' : matchLevel === 'medium' ? 'Good Match' : 'Relevant';
+
+      return `
+        <a class="affiliate-card type-${a.type}" href="${a.href}" data-type="${a.type}">
+          <div class="aff-match-score ${matchLevel}">${matchLabel}</div>
+          ${isTopPick ? '<div class="aff-priority-banner visible">⚡ Highest Priority</div>' : ''}
+          <div class="aff-trigger">${a.matchReasons[0] || 'Matched to your profile'}</div>
+          <div class="aff-reasons">
+            ${a.matchReasons.slice(1).map(r => `<span class="aff-reason-tag">${r}</span>`).join('')}
+          </div>
+          <div class="aff-name">${a.name}</div>
+          <div class="aff-desc">${a.desc}</div>
+          ${a.urgency ? `<div class="aff-urgency visible">⚠ ${a.urgency}</div>` : ''}
+          <div class="aff-cta">
+            <span class="aff-link">${a.cta}</span>
+            <span class="aff-arrow">→</span>
+          </div>
+        </a>
+      `;
+    }).join('');
+  }
+
+  function resetToUpload() {
+    document.getElementById('resultsState').classList.remove('visible');
+    document.getElementById('experianOCRBanner').classList.remove('visible');
+    document.getElementById('uploadState').style.display = 'block';
+    document.getElementById('fileSelected').classList.remove('visible');
+    document.getElementById('parseBtn').classList.remove('visible');
+    document.getElementById('fileInput').value = '';
+
+    // Reset processing steps
+    ['step1','step2','step3','step4','step5'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      el.classList.remove('active','done');
+      el.querySelector('.proc-step-icon').textContent = '0' + (i + 1);
+    });
+    document.getElementById('loadingBar').style.width = '0%';
+
+    selectedFile = null;
+    detectedPipeline = 'docint';
+
+    // Reset dispute queue
+    disputeQueue = [];
+    parsedReportData = null;
+    document.getElementById('disputeQueuePanel').classList.remove('visible');
+    document.getElementById('disputeQueueCount').textContent = '0 items queued';
+    document.getElementById('dqBadgeCount').textContent = '0';
+
+    // Reset email capture
+    document.getElementById('emailInput').value = '';
+    document.getElementById('emailInput').style.borderColor = '';
+    document.getElementById('emailFormWrap').style.display = 'block';
+    document.getElementById('emailSuccessWrap').style.display = 'none';
+
+  }
+
+  // ── SURVEY ────────────────────────────────────────
+  function selectSurveyOpt(btn, qid) {
+    const opts = document.getElementById(qid + 'opts').querySelectorAll('.survey-opt');
+    opts.forEach(o => o.classList.remove('selected'));
+    btn.classList.add('selected');
+    surveyAnswers[qid] = btn.dataset.val;
+
+    // Enable submit if both answered
+    if (surveyAnswers.q1 && surveyAnswers.q2) {
+      document.getElementById('surveySubmitBtn').disabled = false;
+    }
+  }
+
+  function submitSurvey() {
+    // In production: POST surveyAnswers to your backend
+    console.log('Survey submitted:', surveyAnswers);
+    document.getElementById('surveyOverlay').classList.remove('visible');
+    // Show a brief toast
+    const toast = document.createElement('div');
+    toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#0D1318;border:1px solid #00E5FF;color:#00E5FF;font-family:"DM Mono",monospace;font-size:12px;letter-spacing:1px;padding:12px 24px;z-index:200;animation:fadeIn 0.3s ease;';
+    toast.textContent = '✓ Feedback recorded — thank you';
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+  }
+
+  function closeSurvey() {
+    document.getElementById('surveyOverlay').classList.remove('visible');
+  }
+
+  // ── PHASE 4: DISPUTE PANDA INTEGRATION ───────────
+  let disputeQueue = []; // { index, name, type, balance, opened, bureau, status }
+  let parsedReportData = null; // store last parsed data for letter generation
+
+  function toggleDisputeItem(index) {
+    const btn = document.getElementById('dispBtn' + index);
+    const existing = disputeQueue.findIndex(d => d.index === index);
+
+    if (existing > -1) {
+      // Remove from queue
+      disputeQueue.splice(existing, 1);
+      btn.classList.remove('queued');
+      btn.innerHTML = '<div class="btn-dot"></div>Add to Dispute Queue';
+    } else {
+      // Add to queue — pull data from parsedReportData
+      const item = parsedReportData.negatives[index];
+      disputeQueue.push({
+        index,
+        name: item.name,
+        type: item.type,
+        balance: item.balance,
+        opened: item.opened,
+        bureau: (item.bureau || selectedBureau).toUpperCase(),
+        status: item.status
+      });
+      btn.classList.add('queued');
+      btn.innerHTML = '<div class="btn-dot"></div>✓ In Queue — Click to Remove';
+    }
+
+    updateDisputeQueue();
+  }
+
+  function updateDisputeQueue() {
+    const count = disputeQueue.length;
+    document.getElementById('disputeQueueCount').textContent = count + ' item' + (count !== 1 ? 's' : '') + ' queued';
+    document.getElementById('dqBadgeCount').textContent = count;
+
+    const panel = document.getElementById('disputeQueuePanel');
+    if (count > 0) {
+      panel.classList.add('visible');
+    } else {
+      panel.classList.remove('visible');
+    }
+
+    // Render queue items
+    document.getElementById('dqItemsList').innerHTML = disputeQueue.map(item => `
+      <div class="dq-item">
+        <div>
+          <div class="dq-item-name">${item.name}</div>
+          <div class="dq-item-meta">${item.type} · ${item.balance} · ${item.bureau}</div>
+        </div>
+        <button class="dq-item-remove" onclick="toggleDisputeItem(${item.index})" title="Remove">✕</button>
+      </div>
+    `).join('');
+  }
+
+  // ── LETTER GENERATION ─────────────────────────────
+  function generateDisputeLetter(item) {
+    const today = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const bureauAddresses = {
+      'EQUIFAX': 'Equifax Information Services LLC\nP.O. Box 740256\nAtlanta, GA 30374',
+      'TRANSUNION': 'TransUnion LLC\nConsumer Dispute Center\nP.O. Box 2000\nChester, PA 19016',
+      'EXPERIAN': 'Experian\nP.O. Box 4500\nAllen, TX 75013'
+    };
+
+    const addr = bureauAddresses[item.bureau] || bureauAddresses['EQUIFAX'];
+    const disputeReason = item.status === 'collection'
+      ? 'I am disputing this collection account as I have no record of this debt and request full verification including the original creditor name, original account number, and date of first delinquency.'
+      : item.status === 'late'
+      ? 'I am disputing the reported late payment status on this account. The payment history as reported does not reflect accurate information and I request a full investigation.'
+      : 'I am disputing this account entry as it contains information that is inaccurate and unverifiable. I request a complete investigation and deletion of any unverifiable data.';
+
+    return `${today}
+
+${addr}
+
+Re: Dispute of Inaccurate Credit Information
+Account: ${item.name}
+Reported Balance: ${item.balance}
+Date Opened: ${item.opened}
+
+To Whom It May Concern,
+
+I am writing to formally dispute information appearing on my credit report that I believe to be inaccurate or unverifiable under the Fair Credit Reporting Act (FCRA), 15 U.S.C. § 1681 et seq.
+
+${disputeReason}
+
+Pursuant to FCRA § 611, I request that your bureau conduct a reasonable investigation of this dispute within 30 days of receipt and provide me with the results. If the information cannot be verified by the furnisher within the required timeframe, it must be deleted or corrected immediately.
+
+Please provide written confirmation of the results of your investigation including:
+— The name and contact information of the furnisher contacted
+— A description of the information investigated
+— A statement of whether the information was corrected, deleted, or verified
+
+I reserve all rights under the FCRA including the right to seek damages for non-compliance.
+
+Sincerely,
+
+[Your Full Name]
+[Your Address]
+[Your City, State ZIP]
+[Your SSN Last 4: XXXX]
+[Your Date of Birth]`;
+  }
+
+  function previewDisputeLetters() {
+    if (disputeQueue.length === 0) return;
+
+    // Preview first item in queue
+    const item = disputeQueue[0];
+    const letter = generateDisputeLetter(item);
+
+    document.getElementById('letterMeta').innerHTML = `
+      <span>Account: <strong>${item.name}</strong></span>
+      <span>Type: <strong>${item.type}</strong></span>
+      <span>Bureau: <strong>${item.bureau}</strong></span>
+      <span>Queue: <strong>${disputeQueue.length} item${disputeQueue.length > 1 ? 's' : ''}</strong></span>
+    `;
+    document.getElementById('letterBody').textContent = letter;
+    document.getElementById('letterOverlay').classList.add('visible');
+  }
+
+  function closeLetterModal() {
+    document.getElementById('letterOverlay').classList.remove('visible');
+  }
+
+  function copyLetter() {
+    const text = document.getElementById('letterBody').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.querySelector('.letter-copy-btn');
+      const orig = btn.textContent;
+      btn.textContent = '✓ Copied';
+      btn.style.color = 'var(--accent3)';
+      btn.style.borderColor = 'var(--accent3)';
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.style.color = '';
+        btn.style.borderColor = '';
+      }, 2000);
+    });
+  }
+
+  // ── JSON EXPORT — Dispute Panda API payload ───────
+  function exportDisputeJSON() {
+    if (disputeQueue.length === 0) return;
+
+    const payload = {
+      parseur10x_version: 'phase4',
+      generated: new Date().toISOString(),
+      bureau: selectedBureau.toUpperCase(),
+      pipeline: detectedPipeline,
+      dispute_items: disputeQueue.map(item => ({
+        account_name: item.name,
+        account_type: item.type,
+        reported_balance: item.balance,
+        date_opened: item.opened,
+        bureau: item.bureau,
+        negative_status: item.status,
+        dispute_reason: item.status === 'collection'
+          ? 'UNVERIFIABLE_COLLECTION'
+          : item.status === 'late'
+          ? 'INACCURATE_PAYMENT_HISTORY'
+          : 'INACCURATE_ACCOUNT_INFORMATION',
+        fcra_basis: '15 U.S.C. § 1681i'
+      }))
+    };
+
+    const json = JSON.stringify(payload, null, 2);
+    navigator.clipboard.writeText(json).then(() => {
+      showToast('✓ JSON payload copied to clipboard — Dispute Panda ready');
+    });
+  }
+
+  function openNotifyModal() {
+    // Focus the notify email input in the queue panel
+    const input = document.getElementById('dqNotifyEmail');
+    if (input) {
+      document.getElementById('disputeQueuePanel').classList.add('visible');
+      input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => input.focus(), 400);
+    }
+  }
+
+  function submitDQNotify() {
+    const email = document.getElementById('dqNotifyEmail').value;
+    if (!email || !email.includes('@')) {
+      document.getElementById('dqNotifyEmail').style.borderColor = 'var(--danger)';
+      return;
+    }
+    // In production: POST to your backend
+    console.log('Dispute Panda notify:', email, 'Queue:', disputeQueue);
+    showToast('✓ You\'ll be notified at ' + email + ' when Dispute Panda API launches');
+    document.getElementById('dqNotifyEmail').value = '';
+  }
+
+  function showToast(msg) {
+    const existing = document.querySelector('.p4-toast');
+    if (existing) existing.remove();
+    const toast = document.createElement('div');
+    toast.className = 'p4-toast';
+    toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#0D1318;border:1px solid #00E5FF;color:#00E5FF;font-family:"DM Mono",monospace;font-size:12px;letter-spacing:1px;padding:12px 24px;z-index:300;animation:fadeIn 0.3s ease;white-space:nowrap;';
+    toast.textContent = msg;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3500);
+  }
+
+
+
+  // ── CONTACT MODAL ─────────────────────────────────
+  function openContactModal() {
+    document.getElementById('contactOverlay').classList.add('visible');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeContactModal() {
+    document.getElementById('contactOverlay').classList.remove('visible');
+    document.body.style.overflow = '';
+    // Reset after close
+    setTimeout(() => {
+      document.getElementById('contactFormWrap').style.display = 'block';
+      document.getElementById('contactSuccessWrap').style.display = 'none';
+      document.getElementById('contactName').value = '';
+      document.getElementById('contactEmail').value = '';
+      document.getElementById('contactSubject').value = '';
+      document.getElementById('contactMessage').value = '';
+      document.getElementById('contactSubmitBtn').disabled = false;
+      document.getElementById('contactSubmitBtn').textContent = 'Send Message';
+    }, 400);
+  }
+
+  function handleContactOverlayClick(e) {
+    if (e.target === document.getElementById('contactOverlay')) closeContactModal();
+  }
+
+  function submitContact() {
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const subject = document.getElementById('contactSubject').value;
+    const message = document.getElementById('contactMessage').value.trim();
+
+    if (!name) { document.getElementById('contactName').style.borderColor = 'var(--danger)'; return; }
+    if (!email || !email.includes('@')) { document.getElementById('contactEmail').style.borderColor = 'var(--danger)'; return; }
+    if (!subject) { document.getElementById('contactSubject').style.borderColor = 'var(--danger)'; return; }
+    if (!message) { document.getElementById('contactMessage').style.borderColor = 'var(--danger)'; return; }
+
+    const btn = document.getElementById('contactSubmitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    const payload = { name, email, subject, message };
+
+    const send = API_BASE
+      ? fetch(`${API_BASE}/api/contact`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        }).then(r => r.json())
+      : new Promise(resolve => setTimeout(() => resolve({ success: true }), 800));
+
+    send
+      .then(result => {
+        if (result.success) {
+          document.getElementById('contactFormWrap').style.display = 'none';
+          document.getElementById('contactSuccessWrap').style.display = 'block';
+        } else {
+          throw new Error(result.error || 'Send failed');
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        showToast('Could not send — please try again');
+      });
+  }
+
+
+  function submitEmail() {
+    const email = document.getElementById('emailInput').value;
+    if (!email || !email.includes('@')) {
+      document.getElementById('emailInput').style.borderColor = 'var(--danger)';
+      return;
+    }
+
+    const btn = document.querySelector('.ec-download-btn');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const payload = {
+      email,
+      reportData: parsedReportData || null,
+    };
+
+    const sendEmail = API_BASE
+      ? fetch(`${API_BASE}/api/email`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        }).then(r => r.json())
+      : Promise.resolve({ success: true }); // dev: simulate success
+
+    sendEmail
+      .then(result => {
+        if (result.success) {
+          document.getElementById('emailFormWrap').style.display = 'none';
+          document.getElementById('emailSuccessWrap').style.display = 'block';
+          document.getElementById('emailSuccessMsg').textContent =
+            `Check your inbox at ${email} — your full credit action report is on its way.`;
+          showToast('✓ Report sent to ' + email);
+        } else {
+          throw new Error(result.error || 'Send failed');
+        }
+      })
+      .catch(err => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        showToast('Could not send — try again');
+        console.error('[EMAIL]', err.message);
+      });
+  }
+
+  // ── PDF REPORT BUILDER ────────────────────────────
+  function buildPDFReport(data) {
+    const today = new Date().toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+    const bureauName = (data.bureau || selectedBureau).toUpperCase();
+    const scoreColor = data.score >= 740 ? '#1a7a40' : data.score >= 670 ? '#007a99' : data.score >= 580 ? '#a06000' : '#cc2244';
+    const scoreLabel = data.score >= 740 ? 'Very Good' : data.score >= 670 ? 'Good' : data.score >= 580 ? 'Fair' : 'Poor';
+
+    // Negative items table rows
+    const negRows = data.negatives.length > 0
+      ? data.negatives.map(n => `
+        <tr>
+          <td>${n.name}</td>
+          <td><span class="pdf-badge neg">${n.type}</span></td>
+          <td>${n.balance}</td>
+          <td>${n.opened}</td>
+          <td>${bureauName}</td>
+        </tr>`).join('')
+      : `<tr><td colspan="5" style="text-align:center;color:#888;font-style:italic;">No negative items detected</td></tr>`;
+
+    // Utilization rows
+    const utilRows = data.utilAccounts.map(a => {
+      const badgeClass = a.utilPct > 70 ? 'neg' : a.utilPct > 30 ? 'warn' : 'good';
+      return `<tr>
+        <td>${a.name}</td>
+        <td>$${a.balance.toLocaleString()}</td>
+        <td>$${a.limit.toLocaleString()}</td>
+        <td><span class="pdf-badge ${badgeClass}">${a.utilPct}%</span></td>
+      </tr>`;
+    }).join('');
+
+    // Good accounts rows
+    const goodRows = data.goodAccounts.map(a => `
+      <tr>
+        <td>${a.name}</td>
+        <td><span class="pdf-badge good">Good Standing</span></td>
+        <td>${a.type}</td>
+        <td>Since ${a.since}</td>
+      </tr>`).join('');
+
+    // Action plan — ranked by impact based on data
+    const actions = [];
+    if (data.negatives.length > 0) actions.push({
+      title: 'Dispute Negative Items First',
+      desc: `You have ${data.negatives.length} negative item${data.negatives.length > 1 ? 's' : ''} on your ${bureauName} report. Under FCRA § 611, the bureau has 30 days to verify each one or remove it. Start here — this is your highest-impact move.`,
+      link: 'https://creditfasttrack10x.live/credit-repair',
+      linkLabel: 'Credit Repair Accelerator — Full Dispute System ($127)'
+    });
+    if (data.utilization > 30) actions.push({
+      title: 'Reduce Credit Utilization Below 30%',
+      desc: `Your current utilization is ${data.utilization}%. Dropping below 30% can add 20–40 points. Pay down balances or open a balance transfer card to consolidate high-utilization accounts.`,
+      link: null
+    });
+    if (data.score < 700 || data.totalAccounts < 4) actions.push({
+      title: 'Build Positive Payment History',
+      desc: 'Adding accounts that report positive payment history to all 3 bureaus accelerates score growth. A credit builder loan or secured card costs little and compounds over time.',
+      link: 'https://creditfasttrack10x.live/',
+      linkLabel: 'Credit Fast Track 10X — 90-Day Score Building System ($67)'
+    });
+    actions.push({
+      title: 'Build a Parallel Business Credit Profile',
+      desc: 'Business credit is tracked separately from your personal FICO. You can begin building a fundable business profile regardless of your personal score — no personal guarantee required.',
+      link: 'https://creditfasttrack10x.live/business-credit',
+      linkLabel: 'Business Credit Unleashed — No-PG System ($197)'
+    });
+
+    const actionHTML = actions.map((a, i) => `
+      <div class="pdf-action-box">
+        <div class="pdf-action-title">${i + 1}. ${a.title}</div>
+        <div class="pdf-action-desc">${a.desc}</div>
+        ${a.link ? `<a class="pdf-action-link" href="${a.link}" target="_blank">→ ${a.linkLabel}</a>` : ''}
+      </div>`).join('');
+
+    return `
+      <div class="pdf-report-header">
+        <div class="pdf-logo">PARSEUR <span>10X</span></div>
+        <div class="pdf-report-meta">
+          Bureau: ${bureauName}<br>
+          Generated: ${today}<br>
+          Pipeline: ${detectedPipeline === 'vision' ? 'Azure AI Vision OCR' : 'Azure Document Intelligence'}<br>
+          Report ID: P10X-${Date.now().toString(36).toUpperCase()}
+        </div>
+      </div>
+
+      <div class="pdf-report-title">Credit Report Analysis</div>
+      <div class="pdf-report-subtitle">Parsed and analyzed by PARSEUR 10X · Powered by Azure AI + GPT-4o</div>
+
+      <div class="pdf-section-title">Score Overview</div>
+      <div class="pdf-score-row">
+        <div class="pdf-score-box">
+          <div class="psb-label">FICO Score</div>
+          <div class="psb-value" style="color:${scoreColor};">${data.score}</div>
+          <div class="psb-sub">${scoreLabel}</div>
+        </div>
+        <div class="pdf-score-box">
+          <div class="psb-label">Utilization</div>
+          <div class="psb-value" style="color:${data.utilization > 70 ? '#cc2244' : data.utilization > 30 ? '#a06000' : '#1a7a40'};">${data.utilization}%</div>
+          <div class="psb-sub">Target: under 30%</div>
+        </div>
+        <div class="pdf-score-box">
+          <div class="psb-label">Negative Items</div>
+          <div class="psb-value" style="color:${data.negatives.length > 0 ? '#cc2244' : '#1a7a40'};">${data.negatives.length}</div>
+          <div class="psb-sub">Flagged accounts</div>
+        </div>
+        <div class="pdf-score-box">
+          <div class="psb-label">Total Accounts</div>
+          <div class="psb-value">${data.totalAccounts}</div>
+          <div class="psb-sub">Tradelines</div>
+        </div>
+      </div>
+
+      <div class="pdf-section-title">Negative Items</div>
+      <table class="pdf-table">
+        <thead><tr>
+          <th>Account Name</th><th>Type</th><th>Balance</th><th>Opened</th><th>Bureau</th>
+        </tr></thead>
+        <tbody>${negRows}</tbody>
+      </table>
+
+      <div class="pdf-section-title">Credit Utilization by Account</div>
+      <table class="pdf-table">
+        <thead><tr>
+          <th>Account</th><th>Balance</th><th>Limit</th><th>Utilization</th>
+        </tr></thead>
+        <tbody>${utilRows}</tbody>
+      </table>
+
+      <div class="pdf-section-title">Accounts in Good Standing</div>
+      <table class="pdf-table">
+        <thead><tr>
+          <th>Account Name</th><th>Status</th><th>Type</th><th>History</th>
+        </tr></thead>
+        <tbody>${goodRows}</tbody>
+      </table>
+
+      <div class="pdf-section-title">Personalized Action Plan</div>
+      ${actionHTML}
+
+      <div class="pdf-disclaimer">
+        This report was generated by PARSEUR 10X using Azure Document Intelligence and OpenAI GPT-4o. It is intended for informational purposes only and does not constitute legal, financial, or credit repair advice. Credit scores and account data are derived from the uploaded bureau report and may differ from scores used by lenders. Resources listed are matched based on parsed report findings. This site may receive compensation for referrals.
+      </div>
+
+      <div class="pdf-footer">
+        <span>PARSEUR 10X · creditfasttrack10x.live</span>
+        <span>Generated ${new Date().toLocaleDateString()} · Confidential</span>
+      </div>
+    `;
+  }
+
+  function openPDFPreview() {
+    if (!parsedReportData) { showToast('Parse a report first to generate your PDF.'); return; }
+    document.getElementById('pdfReportContent').innerHTML = buildPDFReport(parsedReportData);
+    document.getElementById('pdfOverlay').classList.add('visible');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePDFPreview() {
+    document.getElementById('pdfOverlay').classList.remove('visible');
+    document.body.style.overflow = '';
+  }
+
+  function downloadPDF() {
+    if (!parsedReportData) { showToast('Parse a report first to generate your PDF.'); return; }
+
+    // Build a clean printable version
+    const reportHTML = buildPDFReport(parsedReportData);
+    const win = window.open('', '_blank');
+    const tag = (t) => t; // identity — used to prevent parser treating strings as real tags
+    const H = '<!DOCTYPE html>\n' +
+      '<ht' + 'ml>\n' +
+      '<he' + 'ad>\n' +
+      '  <meta charset="UTF-8">\n' +
+      '  <title>PARSEUR 10X \u2014 Credit Report</title>\n' +
+      '  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">\n' +
+      '  <sty' + 'le>\n' +
+      '    * { box-sizing: border-box; margin: 0; padding: 0; }\n' +
+      '    body { font-family: Georgia, serif; color: #111; background: #fff; padding: 48px 52px; max-width: 860px; margin: 0 auto; }\n' +
+      extractPDFStyles() +
+      '    @media print { body { padding: 0; } .no-print { display: none !important; } a { color: inherit; } }\n' +
+      '  </sty' + 'le>\n' +
+      '</he' + 'ad>\n' +
+      '<bo' + 'dy>\n' +
+      '  <div class="pdf-report">' + reportHTML + '</div>\n' +
+      '  <div class="no-print" style="text-align:center;padding:32px;font-family:monospace;font-size:12px;color:#888;">Use your browser\u2019s Print function (Ctrl/Cmd+P) \u2192 Save as PDF</div>\n' +
+      '  <scr' + 'ipt>setTimeout(() => window.print(), 800);</scr' + 'ipt>\n' +
+      '</bo' + 'dy>\n' +
+      '</ht' + 'ml>';
+    win.document.write(H);
+    win.document.close();
+  }
+
+  // Extract PDF-specific CSS from the page to inject into print window
+  function extractPDFStyles() {
+    return `
+      .pdf-report-header { display:flex; align-items:flex-start; justify-content:space-between; padding-bottom:24px; border-bottom:3px solid #080C10; margin-bottom:32px; }
+      .pdf-logo { font-family:'Syne',sans-serif; font-size:22px; font-weight:800; color:#080C10; }
+      .pdf-logo span { color:#00C8E0; }
+      .pdf-report-meta { text-align:right; font-size:11px; color:#666; line-height:1.8; font-family:'DM Mono',monospace; }
+      .pdf-report-title { font-family:'Syne',sans-serif; font-size:26px; font-weight:800; color:#080C10; margin-bottom:6px; }
+      .pdf-report-subtitle { font-size:13px; color:#555; margin-bottom:32px; }
+      .pdf-section-title { font-family:'Syne',sans-serif; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:#080C10; border-bottom:1px solid #e0e0e0; padding-bottom:6px; margin-bottom:16px; margin-top:28px; }
+      .pdf-score-row { display:flex; gap:16px; margin-bottom:24px; }
+      .pdf-score-box { flex:1; border:1px solid #e0e0e0; padding:16px 20px; text-align:center; }
+      .psb-label { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:#888; margin-bottom:6px; font-family:'DM Mono',monospace; }
+      .psb-value { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; color:#080C10; line-height:1; }
+      .psb-sub { font-size:10px; color:#999; margin-top:4px; font-family:'DM Mono',monospace; }
+      .pdf-table { width:100%; border-collapse:collapse; font-size:12px; margin-bottom:8px; }
+      .pdf-table th { background:#080C10; color:#fff; padding:9px 12px; text-align:left; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:1px; text-transform:uppercase; }
+      .pdf-table td { padding:10px 12px; border-bottom:1px solid #f0f0f0; }
+      .pdf-table tr:nth-child(even) td { background:#fafafa; }
+      .pdf-badge { display:inline-block; font-size:9px; letter-spacing:1px; padding:2px 7px; text-transform:uppercase; font-family:'DM Mono',monospace; font-weight:600; }
+      .pdf-badge.neg { background:#fff0f3; color:#cc2244; border:1px solid #ffccd5; }
+      .pdf-badge.good { background:#f0fff4; color:#1a7a40; border:1px solid #c3f0d0; }
+      .pdf-badge.warn { background:#fffbf0; color:#a06000; border:1px solid #ffe4a0; }
+      .pdf-action-box { background:#f8f9fa; border-left:4px solid #00C8E0; padding:16px 20px; margin-bottom:12px; }
+      .pdf-action-title { font-family:'Syne',sans-serif; font-size:13px; font-weight:700; color:#080C10; margin-bottom:4px; }
+      .pdf-action-desc { font-size:12px; color:#555; line-height:1.6; }
+      .pdf-action-link { font-size:11px; color:#00A8BF; font-family:'DM Mono',monospace; margin-top:6px; display:block; }
+      .pdf-disclaimer { margin-top:24px; padding:14px 16px; background:#f8f8f8; border:1px solid #e8e8e8; font-size:10px; color:#888; line-height:1.6; font-family:'DM Mono',monospace; }
+      .pdf-footer { margin-top:24px; padding-top:16px; border-top:1px solid #e0e0e0; display:flex; justify-content:space-between; font-size:10px; color:#aaa; font-family:'DM Mono',monospace; }
+    `;
+  }
+</script>
+</body>
+</html>

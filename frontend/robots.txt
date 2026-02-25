@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://parseur10.live/sitemap.xml
