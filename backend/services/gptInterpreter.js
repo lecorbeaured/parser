@@ -1,23 +1,21 @@
 // services/gptInterpreter.js
-// Sends raw OCR/extracted text to Azure OpenAI GPT-4o for structured interpretation
+// Sends raw OCR/extracted text to OpenAI GPT-4o for structured interpretation
 
 const axios = require('axios');
 
-const ENDPOINT = process.env.AZURE_OPENAI_ENDPOINT;
-const KEY = process.env.AZURE_OPENAI_KEY;
-const DEPLOYMENT = process.env.AZURE_OPENAI_DEPLOYMENT || 'gpt-4o';
-const API_VERSION = '2024-02-01';
+const API_KEY = process.env.OPENAI_API_KEY;
+const MODEL = process.env.OPENAI_MODEL || 'gpt-4o';
 
 /**
  * Parse raw credit report text into structured JSON via GPT-4o.
  * Returns a clean object matching the frontend's expected data shape.
  */
 async function interpretCreditReport(rawText, bureau) {
-  if (!ENDPOINT || !KEY) {
-    throw new Error('Azure OpenAI credentials not configured');
+  if (!API_KEY) {
+    throw new Error('OpenAI API key not configured (OPENAI_API_KEY)');
   }
 
-  const url = `${ENDPOINT}openai/deployments/${DEPLOYMENT}/chat/completions?api-version=${API_VERSION}`;
+  const url = 'https://api.openai.com/v1/chat/completions';
 
   const systemPrompt = `You are an expert credit analyst. Your job is to parse raw credit report text and extract structured data. You must respond ONLY with valid JSON — no markdown, no explanation, no code fences. The JSON must exactly match the schema provided.`;
 
@@ -67,26 +65,26 @@ RULES:
 - Respond ONLY with JSON. No markdown. No explanation.
 
 CREDIT REPORT TEXT:
-${rawText.slice(0, 12000)}`; // cap at ~12k chars to stay within token limits
+\${rawText.slice(0, 12000)}`;
 
   const response = await axios.post(url, {
+    model: MODEL,
     messages: [
       { role: 'system', content: systemPrompt },
       { role: 'user', content: userPrompt }
     ],
     max_tokens: 2000,
-    temperature: 0.1, // low temperature for consistent structured output
+    temperature: 0.1,
   }, {
     headers: {
-      'api-key': KEY,
+      'Authorization': \`Bearer \${API_KEY}\`,
       'Content-Type': 'application/json',
     },
   });
 
   const rawContent = response.data.choices?.[0]?.message?.content || '';
 
-  // Strip any accidental markdown fences
-  const cleaned = rawContent.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+  const cleaned = rawContent.replace(/\`\`\`json\n?/g, '').replace(/\`\`\`\n?/g, '').trim();
 
   let parsed;
   try {
@@ -96,7 +94,6 @@ ${rawText.slice(0, 12000)}`; // cap at ~12k chars to stay within token limits
     throw new Error('GPT-4o returned malformed JSON — see server logs');
   }
 
-  // Validate and sanitize the parsed result
   return sanitizeResult(parsed, bureau);
 }
 
