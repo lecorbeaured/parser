@@ -77,14 +77,14 @@ CREDIT REPORT TEXT:
     temperature: 0.1,
   }, {
     headers: {
-      'Authorization': \`Bearer \${API_KEY}\`,
+      'Authorization': `Bearer \${API_KEY}`,
       'Content-Type': 'application/json',
     },
   });
 
   const rawContent = response.data.choices?.[0]?.message?.content || '';
 
-  const cleaned = rawContent.replace(/\`\`\`json\n?/g, '').replace(/\`\`\`\n?/g, '').trim();
+  const cleaned = rawContent.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
 
   let parsed;
   try {
