@@ -1,7 +1,9 @@
 // services/pipelineRouter.js
 // Decides which Azure service to use based on file type and content
 
-const pdfParse = require('pdf-parse');
+// NOTE: pdf-parse is lazy-loaded inside hasTextLayer() to avoid a known issue
+// where it tries to require test files from disk on module load, crashing the
+// process in Railway/Docker environments before the server can start.
 const { extractTextFromPDF } = require('./documentIntelligence');
 const { extractTextFromImage } = require('./visionOCR');
 
@@ -64,9 +66,11 @@ async function routeFile(fileBuffer, mimeType, forcePipeline = null) {
 /**
  * Quick local check — does this PDF have a real text layer?
  * Uses pdf-parse which runs locally (no Azure cost).
+ * Lazy-loaded to avoid Railway/Docker startup crash (pdf-parse test file issue).
  */
 async function hasTextLayer(pdfBuffer) {
   try {
+    const pdfParse = require('pdf-parse');
     const data = await pdfParse(pdfBuffer, { max: 3 }); // only check first 3 pages
     return data.text && data.text.trim().length > MIN_TEXT_LENGTH;
   } catch (e) {
